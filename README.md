@@ -1,1 +1,1 @@
-# bua-upper-ontology
+# BUA Upper Ontology
