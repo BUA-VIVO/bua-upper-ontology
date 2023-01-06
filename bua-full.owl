@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-full.owl#"
-     xml:base="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-full.owl"
+<rdf:RDF xmlns="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/"
+     xml:base="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-full.owl">
-        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-01-06/bua-full.owl"/>
+    <owl:Ontology rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua-full.owl">
+        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/releases/2023-01-06/bua-full.owl"/>
         <terms:description>None</terms:description>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
+        <terms:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
         <terms:title>VIVO BUA Upper ontology</terms:title>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-01-06</owl:versionInfo>
     </owl:Ontology>
@@ -63,9 +63,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BUA_0000000 -->
+    <!-- http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000000 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BUA_0000000">
+    <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000000">
         <rdfs:label xml:lang="en">root node</rdfs:label>
     </owl:Class>
 </rdf:RDF>
