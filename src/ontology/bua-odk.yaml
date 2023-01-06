@@ -1,0 +1,17 @@
+id: bua
+title: VIVO BUA Upper ontology
+github_org: BUA-VIVO
+git_main_branch: main
+repo: bua-upper-ontology
+uribase: "http://vivo.berlin-university-alliance.de/ontology/core/v1/bua"
+base_iris:
+    - "http://vivo.berlin-university-alliance.de/ontology/core/v1/bua"
+release_artefacts:
+    - base
+    - full
+    - simple
+primary_release: full
+export_formats:
+    - owl
+    - ttl
+robot_java_args: '-Xmx8G'
