@@ -1,0 +1,94 @@
+@prefix : <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua.ttl> .
+
+<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua.ttl> rdf:type owl:Ontology ;
+                                                                          owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-01-06/bua.ttl> ;
+                                                                          <http://purl.org/dc/terms/description> "This is the Upper intology for the Berlin University Alliance"@en-us ;
+                                                                          <http://purl.org/dc/terms/license> <http://creativecommons.org/publicdomain/zero/1.0/> ;
+                                                                          <http://purl.org/dc/terms/title> "VIVO BUA Upper ontology" ;
+                                                                          rdfs:label "Berlin University Alliance Obere Ontologie"@de-de ,
+                                                                                     "Berlin University Alliance Upper Ontology"@en-us ;
+                                                                          owl:versionInfo "2023-01-06"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+<http://purl.obolibrary.org/obo/IAO_0000115> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty ;
+                                       rdfs:label "description" .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
+                                   rdfs:label "license" .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
+                                 rdfs:label "title" .
+
+
+###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> rdf:type owl:AnnotationProperty .
+
+
+###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> rdf:type owl:AnnotationProperty .
+
+
+###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> rdf:type owl:AnnotationProperty .
+
+
+###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot> rdf:type owl:AnnotationProperty .
+
+
+###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> rdf:type owl:AnnotationProperty .
+
+
+###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> rdf:type owl:AnnotationProperty .
+
+
+###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> rdf:type owl:AnnotationProperty .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/geritId
+<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/geritId> rdf:type owl:AnnotationProperty ;
+                                                                         rdfs:label "Gerit Id" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000000
+<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000000> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://vivoweb.org/ontology/core#AcademicUnit> ;
+                                                                             <http://purl.obolibrary.org/obo/IAO_0000115> "Part of Academic Apartment"@en ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouporganizations> ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                             rdfs:label "Arbeitsbereich"@de ,
+                                                                                        "Research Field"@en .
+
+
+###  http://vivoweb.org/ontology/core#AcademicUnit
+<http://vivoweb.org/ontology/core#AcademicUnit> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi
