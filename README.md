@@ -3,7 +3,6 @@
 
 Description: None
 
-More information can be found at http://obofoundry.org/ontology/bua
 
 ## Versions
 
@@ -13,7 +12,6 @@ The latest version of the ontology can always be found at:
 
 http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua.owl
 
-(note this will not show up until the request has been approved by obofoundry.org)
 
 ### Editors' version
 
