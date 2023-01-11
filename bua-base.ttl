@@ -7,12 +7,12 @@
 @base <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-base.ttl> .
 
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-base.ttl> rdf:type owl:Ontology ;
-                                                                                   owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-01-10/bua-base.ttl> ;
+                                                                                   owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-01-11/bua-base.ttl> ;
                                                                                    <http://purl.org/dc/elements/1.1/type> <http://purl.obolibrary.org/obo/IAO_8000001> ;
                                                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> "bua"^^xsd:string ;
                                                                                    rdfs:label "Berlin University Alliance Obere Ontologie"@de-de ,
                                                                                               "Berlin University Alliance Upper Ontology"@en-us ;
-                                                                                   owl:versionInfo "2023-01-10"^^xsd:string .
+                                                                                   owl:versionInfo "2023-01-11"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -744,6 +744,27 @@
                                                                                         "Zentralregister"@de-de .
 
 
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000057
+<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000057> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#Forschungsbereich> ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouporganizations> ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                             rdfs:label "Forschungsbereich"@de-de ,
+                                                                                        "Research area"@en-us .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000058
+<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000058> rdf:type owl:Class ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouporganizations> ;
+                                                                             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                             rdfs:label "Central service provider"@en-us ,
+                                                                                        "Zentrale Dienstleister"@de-de .
+
+
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KnowledgeArea
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KnowledgeArea> rdf:type owl:Class .
 
@@ -766,6 +787,10 @@
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#Klinik
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#Klinik> rdf:type owl:Class .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#Forschungsbereich
+<http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#Forschungsbereich> rdf:type owl:Class .
 
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#Forschungsschwerpunkt
