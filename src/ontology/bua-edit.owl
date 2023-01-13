@@ -23,6 +23,8 @@ Prefix(vivo-bua-char:=<http://vivo.berlin-university-alliance.de/ontology/core/v
 
 Ontology(<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/>
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/1.0>
+Annotation(<http://purl.org/dc/terms/description> "This is the upper otnology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape"@en-us)
+Annotation(<http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/>)
 Annotation(vitro:ontologyPrefixAnnot "bua"^^xsd:string)
 Annotation(rdfs:label "Berlin University Alliance Obere Ontologie"@de-de)
 Annotation(rdfs:label "Berlin University Alliance Upper Ontology"@en-us)
@@ -131,6 +133,8 @@ Declaration(ObjectProperty(bua:knowledgeAreaFor))
 Declaration(ObjectProperty(bua:knowledgeAreaOf))
 Declaration(ObjectProperty(bua:topicIn))
 Declaration(ObjectProperty(skos:inScheme))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
 Declaration(AnnotationProperty(vitro:hiddenFromDisplayBelowRoleLevelAnnot))
 Declaration(AnnotationProperty(vitro:hiddenFromPublishBelowRoleLevelAnnot))
 Declaration(AnnotationProperty(vitro:inClassGroup))
@@ -142,6 +146,14 @@ Declaration(AnnotationProperty(bua:geritId))
 ############################
 #   Annotation Properties
 ############################
+
+# Annotation Property: <http://purl.org/dc/terms/description> (description)
+
+AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/description> "description")
+
+# Annotation Property: <http://purl.org/dc/terms/license> (license)
+
+AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/license> "license")
 
 # Annotation Property: bua:geritId (GERIT ID)
 
