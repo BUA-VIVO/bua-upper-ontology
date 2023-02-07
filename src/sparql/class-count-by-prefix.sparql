@@ -1,11 +1,10 @@
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix obo: <http://purl.obolibrary.org/obo/>
-prefix bua: <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/>
 
 SELECT ?prefix (COUNT(DISTINCT ?cls) AS ?numberOfClasses) WHERE 
 {
   ?cls a owl:Class .
   FILTER (!isBlank(?cls))
-  BIND( STRBEFORE(STRAFTER(str(?cls),"hhttp://vivo.berlin-university-alliance.de/ontology/core/v1/bua/"), "_") AS ?prefix)
+  BIND( STRBEFORE(STRAFTER(str(?cls),"http://purl.obolibrary.org/obo/"), "_") AS ?prefix)
 }
 GROUP BY ?prefix

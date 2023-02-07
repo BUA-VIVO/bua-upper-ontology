@@ -19,14 +19,10 @@ homepage: https://github.com/BUA-VIVO/bua-upper-ontology
 products:
   - id: bua.owl
     name: "VIVO BUA Upper ontology main release in OWL format"
-  - id: bua.obo
-    name: "VIVO BUA Upper ontology additional release in OBO format"
   - id: bua.json
     name: "VIVO BUA Upper ontology additional release in OBOJSon format"
   - id: bua/bua-base.owl
     name: "VIVO BUA Upper ontology main release in OWL format"
-  - id: bua/bua-base.obo
-    name: "VIVO BUA Upper ontology additional release in OBO format"
   - id: bua/bua-base.json
     name: "VIVO BUA Upper ontology additional release in OBOJSon format"
 dependencies:
