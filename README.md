@@ -9,7 +9,7 @@ Description: None
 ### Stable release versions
 
 The latest version of the ontology can always be found at:
-[http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua.owl](https://github.com/BUA-VIVO/bua-upper-ontology/blob/main/bua.owl)
+[https://github.com/BUA-VIVO/bua-upper-ontology/blob/main/bua.owl](https://github.com/BUA-VIVO/bua-upper-ontology/blob/main/bua.owl)
 
 
 ### Editors' version
