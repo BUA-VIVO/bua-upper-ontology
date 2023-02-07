@@ -1,4 +1,4 @@
-Prefix(:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/>)
+Prefix(:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/>)
 Prefix(bfo:=<http://w3id.org/roh/mirror/obo/bfo#>)
 Prefix(bua:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/>)
 Prefix(iao:=<http://purl.obolibrary.org/obo/iao/>)
@@ -15,10 +15,10 @@ Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
 Prefix(vivo:=<http://vivoweb.org/ontology/core#>)
 Prefix(vcard:=<http://www.w3.org/2006/vcard/ns#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
-Prefix(buaproject:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/>)
+Prefix(buaproject:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/>)
 
 
-Ontology(<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/buaproject.owl>
+Ontology(<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/buaproject.owl>
 Annotation(dcterms:description "This ontology describes the project entity and its properties and restraints for use in the BUA VIVO application"@en)
 Annotation(dcterms:license <http://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "VIVO BUA Project ontology")

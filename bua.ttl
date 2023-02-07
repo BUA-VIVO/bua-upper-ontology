@@ -108,6 +108,263 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 <http://purl.org/spar/cito/cites> rdf:type owl:ObjectProperty .
 
 
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000014
+:BUAPROJECT_0000014 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://w3id.org/roh#correspondingAuthor> ;
+                    owl:inverseOf :BUAPROJECT_0000015 ;
+                    rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
+                    rdfs:comment "An object property linking an Entity to a Person, considered the author of such Thing."@en ,
+                                 "Eine Objekteigenschaft, die eine Entität mit einer Person verbindet, die als Urheber dieser Sache gilt"@de ;
+                    rdfs:label "corresponding author"@en ,
+                               "entsprechender Autor"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000015
+:BUAPROJECT_0000015 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://w3id.org/roh#correspondingAuthorOf> ;
+                    rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                    rdfs:comment "An object property linking a Person with a Thing, such person is corresponding author for."@en ,
+                                 "Eine Objekteigenschaft, die eine Person mit einer Sache verknüpft, diese Person ist der entsprechende Autor für"@de ;
+                    rdfs:label "corresponding author of"@en ,
+                               "entsprechender Autor von"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000016
+:BUAPROJECT_0000016 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://w3id.org/roh#correspondingOrganization> ;
+                    owl:inverseOf :BUAPROJECT_0000017 ;
+                    rdfs:range <http://xmlns.com/foaf/0.1/Organization> ;
+                    rdfs:label "corresponding Organization"@en ,
+                               "entsprechende Organisation"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000017
+:BUAPROJECT_0000017 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://w3id.org/roh#correspondingOrganizationOf> ;
+                    rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                    rdfs:label "corresponding Organization Of"@en ,
+                               "entsprechende Organisation der"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000018
+:BUAPROJECT_0000018 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://vivoweb.org/ontology/core#dateTimeValue> ;
+                    rdfs:domain <http://vivoweb.org/ontology/core#Project> ;
+                    rdfs:range <http://vivoweb.org/ontology/core#DateTimeValue> ;
+                    rdfs:comment "The date in which a Justificacion has to be delivered."@en ;
+                    rdfs:label "foreseen justification date"@en ,
+                               "vorgesehenes Begründungsdatum"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000019
+:BUAPROJECT_0000019 rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :BUAPROJECT_0000024 ;
+                    rdfs:range <http://vivoweb.org/ontology/core#License> ;
+                    rdfs:comment "Diese Objekteigenschaft wird verwendet, um die Lizenz (vivo:License) einer bestimmten Instanz anzugeben."@de ,
+                                 "This object property is used to specify the licence (vivo:License) of a given instance."@en ;
+                    rdfs:label "has license"@en ,
+                               "hat Lizenz"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000020
+:BUAPROJECT_0000020 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    owl:inverseOf :BUAPROJECT_0000023 ;
+                    rdfs:label "has predecessor"@en ,
+                               "hat Vorgänger"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000021
+:BUAPROJECT_0000021 rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :BUAPROJECT_0000029 ;
+                    rdfs:domain :BUAPROJECT_0000000 ;
+                    rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                        owl:someValuesFrom :BUAPROJECT_0000006
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+                    rdfs:comment "A Project is categorized by different Project Classifications."@en ;
+                    rdfs:label "has project categorization"@en ,
+                               "hat Projektkategorisierung"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000022
+:BUAPROJECT_0000022 rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :BUAPROJECT_0000034 ;
+                    rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
+                    rdfs:range <http://w3id.org/roh/mirror/obo/bfo#BFO_0000023> ;
+                    rdfs:comment "An Agent has a Role in a Relation."@en ;
+                    rdfs:label "has role"@en ,
+                               "hat rolle"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000023
+:BUAPROJECT_0000023 rdf:type owl:ObjectProperty ;
+                    rdfs:label "has sucessor"@en ,
+                               "hat Nachfolger"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000024
+:BUAPROJECT_0000024 rdf:type owl:ObjectProperty ;
+                    rdfs:range owl:Thing ;
+                    rdfs:comment "Diese Objekteigenschaft wird verwendet, um Instanzen durch eine bestimmte Lizenz (vivo:License) zu lizenzieren."@de ,
+                                 "This object property is used to which instances are licensed by a given license (vivo:License)."@en ;
+                    rdfs:label "gestattet"@de ,
+                               "license"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000025
+:BUAPROJECT_0000025 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ,
+                                       <http://w3id.org/roh#partOfRepository> ;
+                    owl:inverseOf :BUAPROJECT_0000031 ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( <http://purl.obolibrary.org/obo/ERO_0000071>
+                                                :BUAPROJECT_0000001
+                                                <http://w3id.org/roh/mirror/bibo#Document>
+                                              )
+                                ] ;
+                    rdfs:range :BUAPROJECT_0000009 ;
+                    rdfs:comment "A core relation that holds between a part and its whole, that in this case is a Repository."@en ,
+                                 "Eine Kernbeziehung, die zwischen einem Teil und seinem Ganzen besteht, das in diesem Fall ein Repository ist."@de ;
+                    rdfs:label "part of repository"@en ,
+                               "teil des Repository."@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000026
+:BUAPROJECT_0000026 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ,
+                                       <http://w3id.org/roh#partOfResearchResult> ;
+                    owl:inverseOf :BUAPROJECT_0000033 ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( <http://purl.obolibrary.org/obo/ERO_0000071>
+                                                :BUAPROJECT_0000001
+                                                <http://w3id.org/roh/mirror/bibo#Document>
+                                              )
+                                ] ;
+                    rdfs:range :BUAPROJECT_0000012 ;
+                    rdfs:comment "A core relation that holds between a part and its hole, that in this case is a Research."@en ;
+                    rdfs:label "part of research result"@en ,
+                               "teil eines Forschungsergebnisses"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000027
+:BUAPROJECT_0000027 rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :BUAPROJECT_0000028 ;
+                    rdfs:range owl:Thing ;
+                    rdfs:comment "Some entity producing some Thing."@en ;
+                    rdfs:label "erzeugt von"@de ,
+                               "produced by"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000028
+:BUAPROJECT_0000028 rdf:type owl:ObjectProperty ;
+                    rdfs:domain owl:Thing ;
+                    rdfs:comment "Some Thing producing some entity."@en ;
+                    rdfs:label "erzeugt"@de ,
+                               "produces"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000029
+:BUAPROJECT_0000029 rdf:type owl:ObjectProperty ;
+                    rdfs:domain [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                         owl:someValuesFrom :BUAPROJECT_0000006
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                    rdfs:range :BUAPROJECT_0000000 ;
+                    rdfs:comment "A Project Classification which categorizes a Project."@en ;
+                    rdfs:label "Projektkategorisierung von"@de ,
+                               "project categorization of"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000030
+:BUAPROJECT_0000030 rdf:type owl:ObjectProperty ;
+                    rdfs:domain :BUAPROJECT_0000000 ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( :BUAPROJECT_0000004
+                                               :BUAPROJECT_0000005
+                                               :BUAPROJECT_0000007
+                                               :BUAPROJECT_0000008
+                                             )
+                               ] ;
+                    rdfs:comment "A project may be in a CLOSED, OPEN or in other future status that may be defined." ;
+                    rdfs:label "Projekt-Status"@de ,
+                               "project status"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000031
+:BUAPROJECT_0000031 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ,
+                                       <http://w3id.org/roh#repositoryHasPart> ;
+                    rdfs:domain :BUAPROJECT_0000009 ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( <http://purl.obolibrary.org/obo/ERO_0000071>
+                                               :BUAPROJECT_0000001
+                                               <http://w3id.org/roh/mirror/bibo#Document>
+                                             )
+                               ] ;
+                    rdfs:comment "A core relation that holds between a whole, that in this case is an Repository, and its part ."@en ,
+                                 "Eine Kernbeziehung, die zwischen einem Ganzen, in diesem Fall einem Repository, und seinem Teil besteht"@de ;
+                    rdfs:label "Repository hat Teil"@es ,
+                               "repository has part"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000032
+:BUAPROJECT_0000032 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://w3id.org/roh#repositoryStatus> ;
+                    rdfs:domain :BUAPROJECT_0000009 ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( :BUAPROJECT_0000004
+                                               :BUAPROJECT_0000005
+                                             )
+                               ] ;
+                    rdfs:comment "The status of a Repository (Closed or Open)."@en ;
+                    rdfs:label "estado del repositorio"@es ,
+                               "repository status"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000033
+:BUAPROJECT_0000033 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ,
+                                       <http://w3id.org/roh#researchResultHasPart> ;
+                    rdfs:domain :BUAPROJECT_0000012 ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( <http://purl.obolibrary.org/obo/ERO_0000071>
+                                               :BUAPROJECT_0000001
+                                               <http://w3id.org/roh/mirror/bibo#Document>
+                                             )
+                               ] ;
+                    rdfs:comment "A core relation that holds between a whole, that in this case is an Research Object (roh:ResearchObject), and its part ."@en ;
+                    rdfs:label "Forschungsergebnis hat als Teil"@de ,
+                               "research result has part"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000034
+:BUAPROJECT_0000034 rdf:type owl:ObjectProperty ;
+                    rdfs:domain <http://w3id.org/roh/mirror/obo/bfo#BFO_0000023> ;
+                    rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                    rdfs:comment "The Role held by an Agent in a Relationship."@en ;
+                    rdfs:label "role of"@en ,
+                               "rolle von"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000035
+:BUAPROJECT_0000035 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://w3id.org/roh#seqOfAuthors> ;
+                    rdfs:range rdf:Seq ;
+                    rdfs:comment "An unordered list of authors."@en ,
+                                 "Eine ungeordnete Liste von Autoren."@de ;
+                    rdfs:label "Autorenliste"@de ,
+                               "seq of authors"@en .
+
+
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/hasKnowledgeArea
 :hasKnowledgeArea rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
@@ -159,263 +416,6 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
          rdfs:label "concept in"@en ,
                     "gegenstand von"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000014
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000014> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf <http://w3id.org/roh#correspondingAuthor> ;
-                                                                                            owl:inverseOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000015> ;
-                                                                                            rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
-                                                                                            rdfs:comment "An object property linking an Entity to a Person, considered the author of such Thing."@en ,
-                                                                                                         "Eine Objekteigenschaft, die eine Entität mit einer Person verbindet, die als Urheber dieser Sache gilt"@de ;
-                                                                                            rdfs:label "corresponding author"@en ,
-                                                                                                       "entsprechender Autor"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000015
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000015> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf <http://w3id.org/roh#correspondingAuthorOf> ;
-                                                                                            rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
-                                                                                            rdfs:comment "An object property linking a Person with a Thing, such person is corresponding author for."@en ,
-                                                                                                         "Eine Objekteigenschaft, die eine Person mit einer Sache verknüpft, diese Person ist der entsprechende Autor für"@de ;
-                                                                                            rdfs:label "corresponding author of"@en ,
-                                                                                                       "entsprechender Autor von"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000016
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000016> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf <http://w3id.org/roh#correspondingOrganization> ;
-                                                                                            owl:inverseOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000017> ;
-                                                                                            rdfs:range <http://xmlns.com/foaf/0.1/Organization> ;
-                                                                                            rdfs:label "corresponding Organization"@en ,
-                                                                                                       "entsprechende Organisation"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000017
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000017> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf <http://w3id.org/roh#correspondingOrganizationOf> ;
-                                                                                            rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
-                                                                                            rdfs:label "corresponding Organization Of"@en ,
-                                                                                                       "entsprechende Organisation der"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000018
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000018> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf <http://vivoweb.org/ontology/core#dateTimeValue> ;
-                                                                                            rdfs:domain <http://vivoweb.org/ontology/core#Project> ;
-                                                                                            rdfs:range <http://vivoweb.org/ontology/core#DateTimeValue> ;
-                                                                                            rdfs:comment "The date in which a Justificacion has to be delivered."@en ;
-                                                                                            rdfs:label "foreseen justification date"@en ,
-                                                                                                       "vorgesehenes Begründungsdatum"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000019
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000019> rdf:type owl:ObjectProperty ;
-                                                                                            owl:inverseOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000024> ;
-                                                                                            rdfs:range <http://vivoweb.org/ontology/core#License> ;
-                                                                                            rdfs:comment "Diese Objekteigenschaft wird verwendet, um die Lizenz (vivo:License) einer bestimmten Instanz anzugeben."@de ,
-                                                                                                         "This object property is used to specify the licence (vivo:License) of a given instance."@en ;
-                                                                                            rdfs:label "has license"@en ,
-                                                                                                       "hat Lizenz"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000020
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000020> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                                            owl:inverseOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000023> ;
-                                                                                            rdfs:label "has predecessor"@en ,
-                                                                                                       "hat Vorgänger"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000021
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000021> rdf:type owl:ObjectProperty ;
-                                                                                            owl:inverseOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000029> ;
-                                                                                            rdfs:domain <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000000> ;
-                                                                                            rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                                                                                              [ rdf:type owl:Restriction ;
-                                                                                                                                owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                                                                                owl:someValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000006>
-                                                                                                                              ]
-                                                                                                                            ) ;
-                                                                                                         rdf:type owl:Class
-                                                                                                       ] ;
-                                                                                            rdfs:comment "A Project is categorized by different Project Classifications."@en ;
-                                                                                            rdfs:label "has project categorization"@en ,
-                                                                                                       "hat Projektkategorisierung"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000022
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000022> rdf:type owl:ObjectProperty ;
-                                                                                            owl:inverseOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000034> ;
-                                                                                            rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
-                                                                                            rdfs:range <http://w3id.org/roh/mirror/obo/bfo#BFO_0000023> ;
-                                                                                            rdfs:comment "An Agent has a Role in a Relation."@en ;
-                                                                                            rdfs:label "has role"@en ,
-                                                                                                       "hat rolle"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000023
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000023> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:label "has sucessor"@en ,
-                                                                                                       "hat Nachfolger"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000024
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000024> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:range owl:Thing ;
-                                                                                            rdfs:comment "Diese Objekteigenschaft wird verwendet, um Instanzen durch eine bestimmte Lizenz (vivo:License) zu lizenzieren."@de ,
-                                                                                                         "This object property is used to which instances are licensed by a given license (vivo:License)."@en ;
-                                                                                            rdfs:label "gestattet"@de ,
-                                                                                                       "license"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000025
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000025> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ,
-                                                                                                               <http://w3id.org/roh#partOfRepository> ;
-                                                                                            owl:inverseOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000031> ;
-                                                                                            rdfs:domain [ rdf:type owl:Class ;
-                                                                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/ERO_0000071>
-                                                                                                                        <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000001>
-                                                                                                                        <http://w3id.org/roh/mirror/bibo#Document>
-                                                                                                                      )
-                                                                                                        ] ;
-                                                                                            rdfs:range <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000009> ;
-                                                                                            rdfs:comment "A core relation that holds between a part and its whole, that in this case is a Repository."@en ,
-                                                                                                         "Eine Kernbeziehung, die zwischen einem Teil und seinem Ganzen besteht, das in diesem Fall ein Repository ist."@de ;
-                                                                                            rdfs:label "part of repository"@en ,
-                                                                                                       "teil des Repository."@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000026
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000026> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ,
-                                                                                                               <http://w3id.org/roh#partOfResearchResult> ;
-                                                                                            owl:inverseOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000033> ;
-                                                                                            rdfs:domain [ rdf:type owl:Class ;
-                                                                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/ERO_0000071>
-                                                                                                                        <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000001>
-                                                                                                                        <http://w3id.org/roh/mirror/bibo#Document>
-                                                                                                                      )
-                                                                                                        ] ;
-                                                                                            rdfs:range <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000012> ;
-                                                                                            rdfs:comment "A core relation that holds between a part and its hole, that in this case is a Research."@en ;
-                                                                                            rdfs:label "part of research result"@en ,
-                                                                                                       "teil eines Forschungsergebnisses"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000027
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000027> rdf:type owl:ObjectProperty ;
-                                                                                            owl:inverseOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000028> ;
-                                                                                            rdfs:range owl:Thing ;
-                                                                                            rdfs:comment "Some entity producing some Thing."@en ;
-                                                                                            rdfs:label "erzeugt von"@de ,
-                                                                                                       "produced by"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000028
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000028> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:domain owl:Thing ;
-                                                                                            rdfs:comment "Some Thing producing some entity."@en ;
-                                                                                            rdfs:label "erzeugt"@de ,
-                                                                                                       "produces"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000029
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000029> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:domain [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                                                                                 owl:someValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000006>
-                                                                                                                               ]
-                                                                                                                             ) ;
-                                                                                                          rdf:type owl:Class
-                                                                                                        ] ;
-                                                                                            rdfs:range <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000000> ;
-                                                                                            rdfs:comment "A Project Classification which categorizes a Project."@en ;
-                                                                                            rdfs:label "Projektkategorisierung von"@de ,
-                                                                                                       "project categorization of"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000030
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000030> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:domain <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000000> ;
-                                                                                            rdfs:range [ rdf:type owl:Class ;
-                                                                                                         owl:unionOf ( <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000004>
-                                                                                                                       <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000005>
-                                                                                                                       <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000007>
-                                                                                                                       <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000008>
-                                                                                                                     )
-                                                                                                       ] ;
-                                                                                            rdfs:comment "A project may be in a CLOSED, OPEN or in other future status that may be defined." ;
-                                                                                            rdfs:label "Projekt-Status"@de ,
-                                                                                                       "project status"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000031
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000031> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ,
-                                                                                                               <http://w3id.org/roh#repositoryHasPart> ;
-                                                                                            rdfs:domain <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000009> ;
-                                                                                            rdfs:range [ rdf:type owl:Class ;
-                                                                                                         owl:unionOf ( <http://purl.obolibrary.org/obo/ERO_0000071>
-                                                                                                                       <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000001>
-                                                                                                                       <http://w3id.org/roh/mirror/bibo#Document>
-                                                                                                                     )
-                                                                                                       ] ;
-                                                                                            rdfs:comment "A core relation that holds between a whole, that in this case is an Repository, and its part ."@en ,
-                                                                                                         "Eine Kernbeziehung, die zwischen einem Ganzen, in diesem Fall einem Repository, und seinem Teil besteht"@de ;
-                                                                                            rdfs:label "Repository hat Teil"@es ,
-                                                                                                       "repository has part"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000032
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000032> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf <http://w3id.org/roh#repositoryStatus> ;
-                                                                                            rdfs:domain <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000009> ;
-                                                                                            rdfs:range [ rdf:type owl:Class ;
-                                                                                                         owl:unionOf ( <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000004>
-                                                                                                                       <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000005>
-                                                                                                                     )
-                                                                                                       ] ;
-                                                                                            rdfs:comment "The status of a Repository (Closed or Open)."@en ;
-                                                                                            rdfs:label "estado del repositorio"@es ,
-                                                                                                       "repository status"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000033
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000033> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ,
-                                                                                                               <http://w3id.org/roh#researchResultHasPart> ;
-                                                                                            rdfs:domain <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000012> ;
-                                                                                            rdfs:range [ rdf:type owl:Class ;
-                                                                                                         owl:unionOf ( <http://purl.obolibrary.org/obo/ERO_0000071>
-                                                                                                                       <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000001>
-                                                                                                                       <http://w3id.org/roh/mirror/bibo#Document>
-                                                                                                                     )
-                                                                                                       ] ;
-                                                                                            rdfs:comment "A core relation that holds between a whole, that in this case is an Research Object (roh:ResearchObject), and its part ."@en ;
-                                                                                            rdfs:label "Forschungsergebnis hat als Teil"@de ,
-                                                                                                       "research result has part"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000034
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000034> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:domain <http://w3id.org/roh/mirror/obo/bfo#BFO_0000023> ;
-                                                                                            rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
-                                                                                            rdfs:comment "The Role held by an Agent in a Relationship."@en ;
-                                                                                            rdfs:label "role of"@en ,
-                                                                                                       "rolle von"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000035
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000035> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:subPropertyOf <http://w3id.org/roh#seqOfAuthors> ;
-                                                                                            rdfs:range rdf:Seq ;
-                                                                                            rdfs:comment "An unordered list of authors."@en ,
-                                                                                                         "Eine ungeordnete Liste von Autoren."@de ;
-                                                                                            rdfs:label "Autorenliste"@de ,
-                                                                                                       "seq of authors"@en .
 
 
 ###  http://vivoweb.org/ontology/core#dateTimeInterval
@@ -486,40 +486,40 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000036
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000036> rdf:type owl:DatatypeProperty ;
-                                                                                            rdfs:subPropertyOf <http://vivoweb.org/ontology/core#identifier> ,
-                                                                                                               <http://w3id.org/roh#projectID> ;
-                                                                                            rdfs:domain <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000000> ;
-                                                                                            rdfs:range rdfs:Literal ;
-                                                                                            rdfs:label "project ID"@en ,
-                                                                                                       "projekt ID"@de .
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000036
+:BUAPROJECT_0000036 rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf <http://vivoweb.org/ontology/core#identifier> ,
+                                       <http://w3id.org/roh#projectID> ;
+                    rdfs:domain :BUAPROJECT_0000000 ;
+                    rdfs:range rdfs:Literal ;
+                    rdfs:label "project ID"@en ,
+                               "projekt ID"@de .
 
 
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000037
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000037> rdf:type owl:DatatypeProperty ;
-                                                                                            rdfs:domain <http://vivoweb.org/ontology/core#Project> ;
-                                                                                            rdfs:range xsd:string ;
-                                                                                            rdfs:comment "A defined objective of the project."@en ,
-                                                                                                         "Eine definierte Ziel des Projekts."@en ;
-                                                                                            rdfs:label "Project Objective"@en ,
-                                                                                                       "Ziel des Projekts"@de .
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000037
+:BUAPROJECT_0000037 rdf:type owl:DatatypeProperty ;
+                    rdfs:domain <http://vivoweb.org/ontology/core#Project> ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "A defined objective of the project."@en ,
+                                 "Eine definierte Ziel des Projekts."@en ;
+                    rdfs:label "Project Objective"@en ,
+                               "Ziel des Projekts"@de .
 
 
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000038
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000038> rdf:type owl:DatatypeProperty ;
-                                                                                            rdfs:comment "A data property that associates a title to a bua Projekt instance." ;
-                                                                                            rdfs:label "Project title"@en ,
-                                                                                                       "Projekttitel"@de .
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000038
+:BUAPROJECT_0000038 rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "A data property that associates a title to a bua Projekt instance." ;
+                    rdfs:label "Project title"@en ,
+                               "Projekttitel"@de .
 
 
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000039
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000039> rdf:type owl:DatatypeProperty ;
-                                                                                            rdfs:subPropertyOf <http://w3id.org/roh#title> ;
-                                                                                            rdfs:comment "A data property that associates a title to any ROH entity requiring it."@en ,
-                                                                                                         "Eine Dateneigenschaft, die einen Titel mit jeder ROH-Entität verknüpft, die ihn benötigt."@de ;
-                                                                                            rdfs:label "titel"@de ,
-                                                                                                       "title"@en .
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000039
+:BUAPROJECT_0000039 rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf <http://w3id.org/roh#title> ;
+                    rdfs:comment "A data property that associates a title to any ROH entity requiring it."@en ,
+                                 "Eine Dateneigenschaft, die einen Titel mit jeder ROH-Entität verknüpft, die ihn benötigt."@de ;
+                    rdfs:label "titel"@de ,
+                               "title"@en .
 
 
 ###  http://vivoweb.org/ontology/core#abbreviation
@@ -581,6 +581,419 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/NET/c4dm/event.owl#Event
 <http://purl.org/NET/c4dm/event.owl#Event> rdf:type owl:Class .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000000
+:BUAPROJECT_0000000 rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.obolibrary.org/obo/Process> ,
+                                    <http://vivoweb.org/ontology/core#Project> ,
+                                    <http://xmlns.com/foaf/0.1/Agent> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000030 ;
+                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                           owl:unionOf ( :BUAPROJECT_0000004
+                                                                         :BUAPROJECT_0000005
+                                                                         :BUAPROJECT_0000007
+                                                                         :BUAPROJECT_0000008
+                                                                       )
+                                                         ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#dateTimeInterval> ;
+                                      owl:someValuesFrom <http://vivoweb.org/ontology/core#DateTimeInterval>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#relates> ;
+                                      owl:someValuesFrom <http://w3id.org/roh/mirror/obo/bfo#BFO_0000023>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://purl.obolibrary.org/obo/ARG_2000028> ;
+                                      owl:allValuesFrom <http://www.w3.org/2006/vcard/ns#Individual>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                      owl:allValuesFrom :BUAPROJECT_0000000
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000018 ;
+                                      owl:allValuesFrom <http://vivoweb.org/ontology/core#DateTimeValue>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000021 ;
+                                      owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                 owl:someValuesFrom :BUAPROJECT_0000006
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000028 ;
+                                      owl:allValuesFrom :BUAPROJECT_0000011
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasKnowledgeArea ;
+                                      owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                 owl:someValuesFrom :KnowledgeArea
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#relates> ;
+                                      owl:allValuesFrom <http://w3id.org/roh/mirror/obo/bfo#BFO_0000023>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000038 ;
+                                      owl:someValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000037 ;
+                                      owl:allValuesFrom rdfs:Literal
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#abbreviation> ;
+                                      owl:allValuesFrom rdfs:Literal
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#description> ;
+                                      owl:allValuesFrom rdfs:Literal
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#freetextKeyword> ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#identifier> ;
+                                      owl:allValuesFrom rdfs:Literal
+                                    ] ;
+                    <http://purl.obolibrary.org/obo/IAO_0000112> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
+                    <http://purl.obolibrary.org/obo/IAO_0000115> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
+                    rdfs:label "Project"@en ,
+                               "Projekt"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000001
+:BUAPROJECT_0000001 rdf:type owl:Class ;
+                    rdfs:subClassOf <http://w3id.org/roh#ExperimentalProtocol> ,
+                                    <http://w3id.org/roh/mirror/obo/bfo#BFO_0000015> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://purl.org/spar/cito/cites> ;
+                                      owl:allValuesFrom owl:Thing
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000014 ;
+                                      owl:allValuesFrom <http://xmlns.com/foaf/0.1/Person>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000020 ;
+                                      owl:allValuesFrom :BUAPROJECT_0000001
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000026 ;
+                                      owl:allValuesFrom :BUAPROJECT_0000012
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000028 ;
+                                      owl:allValuesFrom :BUAPROJECT_0000002
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000031 ;
+                                      owl:allValuesFrom :BUAPROJECT_0000009
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000035 ;
+                                      owl:allValuesFrom rdf:Seq
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasKnowledgeArea ;
+                                      owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                 owl:someValuesFrom :KnowledgeArea
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#dateTimeInterval> ;
+                                      owl:allValuesFrom <http://vivoweb.org/ontology/core#DateTimeInterval>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://xmlns.com/foaf/0.1/homepage> ;
+                                      owl:allValuesFrom <http://w3id.org/roh/mirror/bibo#Webpage>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000035 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000039 ;
+                                      owl:someValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000039 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#freetextKeyword> ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://w3id.org/roh/mirror/bibo#abstract> ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ;
+                    rdfs:label "Experimental Protocol"@en ,
+                               "Experimentelles Protokoll"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000002
+:BUAPROJECT_0000002 rdf:type owl:Class ;
+                    rdfs:subClassOf <http://w3id.org/roh#ExperimentalProtocolResult> ,
+                                    <http://w3id.org/roh/mirror/bibo#Document> ;
+                    rdfs:comment "Document that contains the result or execution of a Experimental Protocol."@en ,
+                                 "Dokument, das das Ergebnis oder die Ausführung eines experimentellen Protokolls enthält."@de ;
+                    rdfs:label "Experimental Protocol Result"@en ,
+                               "Experimentelles Protokoll Ergebnis"@es .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000003
+:BUAPROJECT_0000003 rdf:type owl:Class ;
+                    rdfs:subClassOf <http://w3id.org/roh/mirror/obo/bfo#BFO_0000023> ;
+                    rdfs:comment "A member who works in a Project or participates in an Activity but do not belong to the main Organization."@en ;
+                    rdfs:label "External Member Role"@en ,
+                               "Rolle des externen Mitglieds"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000004
+:BUAPROJECT_0000004 rdf:type owl:Class ;
+                    rdfs:subClassOf :BUAPROJECT_0000013 ;
+                    rdfs:label "Ausstehend"@en ,
+                               "Open"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000005
+:BUAPROJECT_0000005 rdf:type owl:Class ;
+                    rdfs:subClassOf :BUAPROJECT_0000013 ;
+                    rdfs:label "Abgeschlossen"@de ,
+                               "Closed"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000006
+:BUAPROJECT_0000006 rdf:type owl:Class ;
+                    rdfs:label "Project Classification"@en ,
+                               "Projektklassifikation"@de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000007
+:BUAPROJECT_0000007 rdf:type owl:Class ;
+                    rdfs:subClassOf :BUAPROJECT_0000013 ;
+                    rdfs:label "Antrag eingereicht"@en ,
+                               "Proposal Submitted"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000008
+:BUAPROJECT_0000008 rdf:type owl:Class ;
+                    rdfs:subClassOf :BUAPROJECT_0000013 ;
+                    rdfs:label "Abgelehnt"@en ,
+                               "Rejected"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000009
+:BUAPROJECT_0000009 rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/IAO_0000030> ,
+                                    <http://w3id.org/roh#Repository> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000032 ;
+                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                           owl:unionOf ( :BUAPROJECT_0000004
+                                                                         :BUAPROJECT_0000005
+                                                                       )
+                                                         ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000035 ;
+                                      owl:someValuesFrom rdf:Seq
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000014 ;
+                                      owl:allValuesFrom <http://xmlns.com/foaf/0.1/Person>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000019 ;
+                                      owl:allValuesFrom <http://vivoweb.org/ontology/core#License>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000020 ;
+                                      owl:allValuesFrom :BUAPROJECT_0000009
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000026 ;
+                                      owl:allValuesFrom :BUAPROJECT_0000012
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000032 ;
+                                      owl:allValuesFrom [ rdf:type owl:Class ;
+                                                          owl:unionOf ( :BUAPROJECT_0000004
+                                                                        :BUAPROJECT_0000005
+                                                                      )
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000035 ;
+                                      owl:allValuesFrom rdf:Seq
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasKnowledgeArea ;
+                                      owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                 owl:someValuesFrom :KnowledgeArea
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#dateTimeValue> ;
+                                      owl:allValuesFrom <http://vivoweb.org/ontology/core#DateTimeValue>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://xmlns.com/foaf/0.1/homepage> ;
+                                      owl:allValuesFrom <http://w3id.org/roh/mirror/bibo#Webpage>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000035 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000039 ;
+                                      owl:someValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000039 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#freetextKeyword> ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://w3id.org/roh/mirror/bibo#abstract> ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ;
+                    rdfs:label "Repositorie"@de ,
+                               "Repository"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000010
+:BUAPROJECT_0000010 rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ,
+                                    <http://w3id.org/roh#ResearchMaterial> ;
+                    rdfs:label "Forschungsmaterial"@de ,
+                               "Research material"@en ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Forschungsmaterial"@de ,
+                                                                    "Research material"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000011
+:BUAPROJECT_0000011 rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Class ;
+                                          owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :BUAPROJECT_0000026 ;
+                                                          owl:someValuesFrom :BUAPROJECT_0000012
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :BUAPROJECT_0000027 ;
+                                                          owl:allValuesFrom :BUAPROJECT_0000000
+                                                        ]
+                                                      )
+                                        ] ;
+                    rdfs:subClassOf :BUAPROJECT_0000012 ;
+                    rdfs:comment "A roh:ResearchObject is generated by one to several foaf:Person specified through property bibo:authorList. Usually a roh:ResearchObject results from the work in a vivo:Project (roh:produces). An elaborated taxonomy of research objects is provided, covering all types of publications, Patents, Software and Webpage. The main author of a research object is accessible through property roh:correspondingAuthor."@en ;
+                    rdfs:label "Forschungsgegenstand"@de ,
+                               "Research Object"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000012
+:BUAPROJECT_0000012 rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000014 ;
+                                      owl:someValuesFrom <http://xmlns.com/foaf/0.1/Person>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000035 ;
+                                      owl:someValuesFrom rdf:Seq
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://purl.org/spar/cito/cites> ;
+                                      owl:allValuesFrom owl:Thing
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000019 ;
+                                      owl:allValuesFrom <http://vivoweb.org/ontology/core#License>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000020 ;
+                                      owl:allValuesFrom :BUAPROJECT_0000012
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000023 ;
+                                      owl:allValuesFrom :BUAPROJECT_0000012
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000033 ;
+                                      owl:allValuesFrom :BUAPROJECT_0000012
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasKnowledgeArea ;
+                                      owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                 owl:someValuesFrom :KnowledgeArea
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://w3id.org/roh/mirror/bibo#AuthorList> ;
+                                      owl:allValuesFrom rdf:Seq
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://xmlns.com/foaf/0.1/homepage> ;
+                                      owl:allValuesFrom <http://w3id.org/roh/mirror/bibo#Webpage>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :BUAPROJECT_0000039 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#freetextKeyword> ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://w3id.org/roh/mirror/bibo#abstract> ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ;
+                    rdfs:label "Forschungsergebnis"@de ,
+                               "Research Result"@en .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000013
+:BUAPROJECT_0000013 rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://vivoweb.org/ontology/core#dateTimeInterval> ;
+                                      owl:allValuesFrom <http://vivoweb.org/ontology/core#DateTimeInterval>
+                                    ] ;
+                    rdfs:label "Stand"@de ,
+                               "Status"@en .
 
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000000
@@ -1208,419 +1621,6 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KnowledgeArea
 :KnowledgeArea rdf:type owl:Class .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000000
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000000> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/Process> ,
-                                                                                                            <http://vivoweb.org/ontology/core#Project> ,
-                                                                                                            <http://xmlns.com/foaf/0.1/Agent> ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000030> ;
-                                                                                                              owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                                                                   owl:unionOf ( <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000004>
-                                                                                                                                                 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000005>
-                                                                                                                                                 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000007>
-                                                                                                                                                 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000008>
-                                                                                                                                               )
-                                                                                                                                 ]
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#dateTimeInterval> ;
-                                                                                                              owl:someValuesFrom <http://vivoweb.org/ontology/core#DateTimeInterval>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#relates> ;
-                                                                                                              owl:someValuesFrom <http://w3id.org/roh/mirror/obo/bfo#BFO_0000023>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://purl.obolibrary.org/obo/ARG_2000028> ;
-                                                                                                              owl:allValuesFrom <http://www.w3.org/2006/vcard/ns#Individual>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                                                                                              owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000000>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty :hasKnowledgeArea ;
-                                                                                                              owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                                                                                                                       [ rdf:type owl:Restriction ;
-                                                                                                                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                                                                                                         owl:someValuesFrom :KnowledgeArea
-                                                                                                                                                       ]
-                                                                                                                                                     ) ;
-                                                                                                                                  rdf:type owl:Class
-                                                                                                                                ]
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000018> ;
-                                                                                                              owl:allValuesFrom <http://vivoweb.org/ontology/core#DateTimeValue>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000021> ;
-                                                                                                              owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                                                                                                                       [ rdf:type owl:Restriction ;
-                                                                                                                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                                                                                                         owl:someValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000006>
-                                                                                                                                                       ]
-                                                                                                                                                     ) ;
-                                                                                                                                  rdf:type owl:Class
-                                                                                                                                ]
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000028> ;
-                                                                                                              owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000011>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#relates> ;
-                                                                                                              owl:allValuesFrom <http://w3id.org/roh/mirror/obo/bfo#BFO_0000023>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000038> ;
-                                                                                                              owl:someValuesFrom xsd:string
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000037> ;
-                                                                                                              owl:allValuesFrom rdfs:Literal
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#abbreviation> ;
-                                                                                                              owl:allValuesFrom rdfs:Literal
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#description> ;
-                                                                                                              owl:allValuesFrom rdfs:Literal
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#freetextKeyword> ;
-                                                                                                              owl:allValuesFrom xsd:string
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#identifier> ;
-                                                                                                              owl:allValuesFrom rdfs:Literal
-                                                                                                            ] ;
-                                                                                            <http://purl.obolibrary.org/obo/IAO_0000112> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
-                                                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
-                                                                                            rdfs:label "Project"@en ,
-                                                                                                       "Projekt"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000001
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000001> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://w3id.org/roh#ExperimentalProtocol> ,
-                                                                                                            <http://w3id.org/roh/mirror/obo/bfo#BFO_0000015> ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://purl.org/spar/cito/cites> ;
-                                                                                                              owl:allValuesFrom owl:Thing
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty :hasKnowledgeArea ;
-                                                                                                              owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                                                                                                                       [ rdf:type owl:Restriction ;
-                                                                                                                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                                                                                                         owl:someValuesFrom :KnowledgeArea
-                                                                                                                                                       ]
-                                                                                                                                                     ) ;
-                                                                                                                                  rdf:type owl:Class
-                                                                                                                                ]
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000014> ;
-                                                                                                              owl:allValuesFrom <http://xmlns.com/foaf/0.1/Person>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000020> ;
-                                                                                                              owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000001>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000026> ;
-                                                                                                              owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000012>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000028> ;
-                                                                                                              owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000002>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000031> ;
-                                                                                                              owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000009>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000035> ;
-                                                                                                              owl:allValuesFrom rdf:Seq
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#dateTimeInterval> ;
-                                                                                                              owl:allValuesFrom <http://vivoweb.org/ontology/core#DateTimeInterval>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://xmlns.com/foaf/0.1/homepage> ;
-                                                                                                              owl:allValuesFrom <http://w3id.org/roh/mirror/bibo#Webpage>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000035> ;
-                                                                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000039> ;
-                                                                                                              owl:someValuesFrom xsd:string
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000039> ;
-                                                                                                              owl:allValuesFrom xsd:string
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#freetextKeyword> ;
-                                                                                                              owl:allValuesFrom xsd:string
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://w3id.org/roh/mirror/bibo#abstract> ;
-                                                                                                              owl:allValuesFrom xsd:string
-                                                                                                            ] ;
-                                                                                            rdfs:label "Experimental Protocol"@en ,
-                                                                                                       "Experimentelles Protokoll"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000002
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000002> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://w3id.org/roh#ExperimentalProtocolResult> ,
-                                                                                                            <http://w3id.org/roh/mirror/bibo#Document> ;
-                                                                                            rdfs:comment "Document that contains the result or execution of a Experimental Protocol."@en ,
-                                                                                                         "Dokument, das das Ergebnis oder die Ausführung eines experimentellen Protokolls enthält."@de ;
-                                                                                            rdfs:label "Experimental Protocol Result"@en ,
-                                                                                                       "Experimentelles Protokoll Ergebnis"@es .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000003
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000003> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://w3id.org/roh/mirror/obo/bfo#BFO_0000023> ;
-                                                                                            rdfs:comment "A member who works in a Project or participates in an Activity but do not belong to the main Organization."@en ;
-                                                                                            rdfs:label "External Member Role"@en ,
-                                                                                                       "Rolle des externen Mitglieds"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000004
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000004> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000013> ;
-                                                                                            rdfs:label "Ausstehend"@en ,
-                                                                                                       "Open"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000005
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000005> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000013> ;
-                                                                                            rdfs:label "Abgeschlossen"@de ,
-                                                                                                       "Closed"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000006
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000006> rdf:type owl:Class ;
-                                                                                            rdfs:label "Project Classification"@en ,
-                                                                                                       "Projektklassifikation"@de .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000007
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000007> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000013> ;
-                                                                                            rdfs:label "Antrag eingereicht"@en ,
-                                                                                                       "Proposal Submitted"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000008
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000008> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000013> ;
-                                                                                            rdfs:label "Abgelehnt"@en ,
-                                                                                                       "Rejected"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000009
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000009> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/IAO_0000030> ,
-                                                                                                            <http://w3id.org/roh#Repository> ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000032> ;
-                                                                                                              owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                                                                   owl:unionOf ( <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000004>
-                                                                                                                                                 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000005>
-                                                                                                                                               )
-                                                                                                                                 ]
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000035> ;
-                                                                                                              owl:someValuesFrom rdf:Seq
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty :hasKnowledgeArea ;
-                                                                                                              owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                                                                                                                       [ rdf:type owl:Restriction ;
-                                                                                                                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                                                                                                         owl:someValuesFrom :KnowledgeArea
-                                                                                                                                                       ]
-                                                                                                                                                     ) ;
-                                                                                                                                  rdf:type owl:Class
-                                                                                                                                ]
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000014> ;
-                                                                                                              owl:allValuesFrom <http://xmlns.com/foaf/0.1/Person>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000019> ;
-                                                                                                              owl:allValuesFrom <http://vivoweb.org/ontology/core#License>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000020> ;
-                                                                                                              owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000009>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000026> ;
-                                                                                                              owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000012>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000032> ;
-                                                                                                              owl:allValuesFrom [ rdf:type owl:Class ;
-                                                                                                                                  owl:unionOf ( <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000004>
-                                                                                                                                                <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000005>
-                                                                                                                                              )
-                                                                                                                                ]
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000035> ;
-                                                                                                              owl:allValuesFrom rdf:Seq
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#dateTimeValue> ;
-                                                                                                              owl:allValuesFrom <http://vivoweb.org/ontology/core#DateTimeValue>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://xmlns.com/foaf/0.1/homepage> ;
-                                                                                                              owl:allValuesFrom <http://w3id.org/roh/mirror/bibo#Webpage>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000035> ;
-                                                                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000039> ;
-                                                                                                              owl:someValuesFrom xsd:string
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000039> ;
-                                                                                                              owl:allValuesFrom xsd:string
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#freetextKeyword> ;
-                                                                                                              owl:allValuesFrom xsd:string
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://w3id.org/roh/mirror/bibo#abstract> ;
-                                                                                                              owl:allValuesFrom xsd:string
-                                                                                                            ] ;
-                                                                                            rdfs:label "Repositorie"@de ,
-                                                                                                       "Repository"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000010
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000010> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ,
-                                                                                                            <http://w3id.org/roh#ResearchMaterial> ;
-                                                                                            rdfs:label "Forschungsmaterial"@de ,
-                                                                                                       "Research material"@en ;
-                                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Forschungsmaterial"@de ,
-                                                                                                                                            "Research material"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000011
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000011> rdf:type owl:Class ;
-                                                                                            owl:equivalentClass [ rdf:type owl:Class ;
-                                                                                                                  owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                                                                  owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000026> ;
-                                                                                                                                  owl:someValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000012>
-                                                                                                                                ]
-                                                                                                                                [ rdf:type owl:Restriction ;
-                                                                                                                                  owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000027> ;
-                                                                                                                                  owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000000>
-                                                                                                                                ]
-                                                                                                                              )
-                                                                                                                ] ;
-                                                                                            rdfs:subClassOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000012> ;
-                                                                                            rdfs:comment "A roh:ResearchObject is generated by one to several foaf:Person specified through property bibo:authorList. Usually a roh:ResearchObject results from the work in a vivo:Project (roh:produces). An elaborated taxonomy of research objects is provided, covering all types of publications, Patents, Software and Webpage. The main author of a research object is accessible through property roh:correspondingAuthor."@en ;
-                                                                                            rdfs:label "Forschungsgegenstand"@de ,
-                                                                                                       "Research Object"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000012
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000012> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000014> ;
-                                                                                                              owl:someValuesFrom <http://xmlns.com/foaf/0.1/Person>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000035> ;
-                                                                                                              owl:someValuesFrom rdf:Seq
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://purl.org/spar/cito/cites> ;
-                                                                                                              owl:allValuesFrom owl:Thing
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty :hasKnowledgeArea ;
-                                                                                                              owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                                                                                                                       [ rdf:type owl:Restriction ;
-                                                                                                                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                                                                                                         owl:someValuesFrom :KnowledgeArea
-                                                                                                                                                       ]
-                                                                                                                                                     ) ;
-                                                                                                                                  rdf:type owl:Class
-                                                                                                                                ]
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000019> ;
-                                                                                                              owl:allValuesFrom <http://vivoweb.org/ontology/core#License>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000020> ;
-                                                                                                              owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000012>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000023> ;
-                                                                                                              owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000012>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000033> ;
-                                                                                                              owl:allValuesFrom <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000012>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://w3id.org/roh/mirror/bibo#AuthorList> ;
-                                                                                                              owl:allValuesFrom rdf:Seq
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://xmlns.com/foaf/0.1/homepage> ;
-                                                                                                              owl:allValuesFrom <http://w3id.org/roh/mirror/bibo#Webpage>
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000039> ;
-                                                                                                              owl:allValuesFrom xsd:string
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#freetextKeyword> ;
-                                                                                                              owl:allValuesFrom xsd:string
-                                                                                                            ] ,
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://w3id.org/roh/mirror/bibo#abstract> ;
-                                                                                                              owl:allValuesFrom xsd:string
-                                                                                                            ] ;
-                                                                                            rdfs:label "Forschungsergebnis"@de ,
-                                                                                                       "Research Result"@en .
-
-
-###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000013
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/BUAPROJECT_0000013> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <http://vivoweb.org/ontology/core#dateTimeInterval> ;
-                                                                                                              owl:allValuesFrom <http://vivoweb.org/ontology/core#DateTimeInterval>
-                                                                                                            ] ;
-                                                                                            rdfs:label "Stand"@de ,
-                                                                                                       "Status"@en .
 
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#Fachbereich
