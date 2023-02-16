@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.org/co" uri="imports/collections.owl"/>
     <uri id="Imports Wizard Entry" name="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/buaproject.owl" uri="imports/buaproject-edit.owl"/>
     <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base=""/>
 </catalog>
