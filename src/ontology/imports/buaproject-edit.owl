@@ -19,6 +19,7 @@ Prefix(buaproject:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/b
 
 
 Ontology(<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/buaproject.owl>
+Import(<http://purl.org/co>)
 Annotation(dcterms:description "This ontology describes the project entity and its properties and restraints for use in the BUA VIVO application"@en)
 Annotation(dcterms:license <http://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "VIVO BUA Project ontology")
@@ -29,7 +30,6 @@ Declaration(Class(obo:BFO_0000040))
 Declaration(Class(obo:ERO_0000071))
 Declaration(Class(obo:Process))
 Declaration(Class(iao:IAO_0000030))
-Declaration(Class(bua:KnowledgeArea))
 Declaration(Class(buaproject:BUAPROJECT_0000000))
 Declaration(Class(buaproject:BUAPROJECT_0000001))
 Declaration(Class(buaproject:BUAPROJECT_0000002))
@@ -44,6 +44,7 @@ Declaration(Class(buaproject:BUAPROJECT_0000010))
 Declaration(Class(buaproject:BUAPROJECT_0000011))
 Declaration(Class(buaproject:BUAPROJECT_0000012))
 Declaration(Class(buaproject:BUAPROJECT_0000013))
+Declaration(Class(buaproject:KnowledgeArea))
 Declaration(Class(vivo:DateTimeInterval))
 Declaration(Class(vivo:DateTimeValue))
 Declaration(Class(vivo:License))
@@ -58,7 +59,6 @@ Declaration(Class(bibo:Document))
 Declaration(Class(bibo:Webpage))
 Declaration(Class(bfo:BFO_0000015))
 Declaration(Class(bfo:BFO_0000023))
-Declaration(Class(rdf:Seq))
 Declaration(Class(skos:Concept))
 Declaration(Class(vcard:Individual))
 Declaration(Class(foaf:Agent))
@@ -68,7 +68,6 @@ Declaration(ObjectProperty(obo:ARG_2000028))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(<http://purl.org/spar/cito/cites>))
-Declaration(ObjectProperty(bua:hasKnowledgeArea))
 Declaration(ObjectProperty(buaproject:BUAPROJECT_0000014))
 Declaration(ObjectProperty(buaproject:BUAPROJECT_0000015))
 Declaration(ObjectProperty(buaproject:BUAPROJECT_0000016))
@@ -91,6 +90,7 @@ Declaration(ObjectProperty(buaproject:BUAPROJECT_0000032))
 Declaration(ObjectProperty(buaproject:BUAPROJECT_0000033))
 Declaration(ObjectProperty(buaproject:BUAPROJECT_0000034))
 Declaration(ObjectProperty(buaproject:BUAPROJECT_0000035))
+Declaration(ObjectProperty(buaproject:hasKnowledgeArea))
 Declaration(ObjectProperty(vivo:dateTimeInterval))
 Declaration(ObjectProperty(vivo:dateTimeValue))
 Declaration(ObjectProperty(vivo:relates))
@@ -125,7 +125,6 @@ Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
 Declaration(AnnotationProperty(owl:maxCardinality))
 Declaration(AnnotationProperty(skos:prefLabel))
-
 ############################
 #   Annotation Properties
 ############################
@@ -166,7 +165,7 @@ AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000015 "entsprechender Aut
 SubObjectPropertyOf(buaproject:BUAPROJECT_0000015 roh:correspondingAuthorOf)
 ObjectPropertyDomain(buaproject:BUAPROJECT_0000015 foaf:Person)
 
-# Object Property: buaproject:BUAPROJECT_0000016 (entsprechende Organisation)
+# Object Property: buaproject:BUAPROJECT_0000016 (corresponding Organization)
 
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000016 "corresponding Organization"@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000016 "entsprechende Organisation"@de)
@@ -174,7 +173,7 @@ SubObjectPropertyOf(buaproject:BUAPROJECT_0000016 roh:correspondingOrganization)
 InverseObjectProperties(buaproject:BUAPROJECT_0000016 buaproject:BUAPROJECT_0000017)
 ObjectPropertyRange(buaproject:BUAPROJECT_0000016 foaf:Organization)
 
-# Object Property: buaproject:BUAPROJECT_0000017 (corresponding Organization Of)
+# Object Property: buaproject:BUAPROJECT_0000017 (entsprechende Organisation der)
 
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000017 "corresponding Organization Of"@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000017 "entsprechende Organisation der"@de)
@@ -199,7 +198,7 @@ AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000019 "hat Lizenz"@de)
 InverseObjectProperties(buaproject:BUAPROJECT_0000019 buaproject:BUAPROJECT_0000024)
 ObjectPropertyRange(buaproject:BUAPROJECT_0000019 vivo:License)
 
-# Object Property: buaproject:BUAPROJECT_0000020 (hat Vorgänger)
+# Object Property: buaproject:BUAPROJECT_0000020 (has predecessor)
 
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000020 "has predecessor"@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000020 "hat Vorgänger"@de)
@@ -215,7 +214,7 @@ InverseObjectProperties(buaproject:BUAPROJECT_0000021 buaproject:BUAPROJECT_0000
 ObjectPropertyDomain(buaproject:BUAPROJECT_0000021 buaproject:BUAPROJECT_0000000)
 ObjectPropertyRange(buaproject:BUAPROJECT_0000021 ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme buaproject:BUAPROJECT_0000006)))
 
-# Object Property: buaproject:BUAPROJECT_0000022 (has role)
+# Object Property: buaproject:BUAPROJECT_0000022 (hat rolle)
 
 AnnotationAssertion(rdfs:comment buaproject:BUAPROJECT_0000022 "An Agent has a Role in a Relation."@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000022 "has role"@en)
@@ -249,7 +248,7 @@ InverseObjectProperties(buaproject:BUAPROJECT_0000025 buaproject:BUAPROJECT_0000
 ObjectPropertyDomain(buaproject:BUAPROJECT_0000025 ObjectUnionOf(obo:ERO_0000071 buaproject:BUAPROJECT_0000001 bibo:Document))
 ObjectPropertyRange(buaproject:BUAPROJECT_0000025 buaproject:BUAPROJECT_0000009)
 
-# Object Property: buaproject:BUAPROJECT_0000026 (teil eines Forschungsergebnisses)
+# Object Property: buaproject:BUAPROJECT_0000026 (part of research result)
 
 AnnotationAssertion(rdfs:comment buaproject:BUAPROJECT_0000026 "A core relation that holds between a part and its hole, that in this case is a Research."@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000026 "part of research result"@en)
@@ -260,7 +259,7 @@ InverseObjectProperties(buaproject:BUAPROJECT_0000026 buaproject:BUAPROJECT_0000
 ObjectPropertyDomain(buaproject:BUAPROJECT_0000026 ObjectUnionOf(obo:ERO_0000071 buaproject:BUAPROJECT_0000001 bibo:Document))
 ObjectPropertyRange(buaproject:BUAPROJECT_0000026 buaproject:BUAPROJECT_0000012)
 
-# Object Property: buaproject:BUAPROJECT_0000027 (erzeugt von)
+# Object Property: buaproject:BUAPROJECT_0000027 (produced by)
 
 AnnotationAssertion(rdfs:comment buaproject:BUAPROJECT_0000027 "Some entity producing some Thing."@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000027 "erzeugt von"@de)
@@ -275,7 +274,7 @@ AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000028 "erzeugt"@de)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000028 "produces"@en)
 ObjectPropertyDomain(buaproject:BUAPROJECT_0000028 owl:Thing)
 
-# Object Property: buaproject:BUAPROJECT_0000029 (Projektkategorisierung von)
+# Object Property: buaproject:BUAPROJECT_0000029 (project categorization of)
 
 AnnotationAssertion(rdfs:comment buaproject:BUAPROJECT_0000029 "A Project Classification which categorizes a Project."@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000029 "Projektkategorisierung von"@de)
@@ -336,14 +335,14 @@ AnnotationAssertion(rdfs:comment buaproject:BUAPROJECT_0000035 "Eine ungeordnete
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000035 "Autorenliste"@de)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000035 "seq of authors"@en)
 SubObjectPropertyOf(buaproject:BUAPROJECT_0000035 roh:seqOfAuthors)
-ObjectPropertyRange(buaproject:BUAPROJECT_0000035 rdf:Seq)
+ObjectPropertyRange(buaproject:BUAPROJECT_0000035 <http://purl.org/co/List>)
 
 
 ############################
 #   Data Properties
 ############################
 
-# Data Property: buaproject:BUAPROJECT_0000036 (projekt ID)
+# Data Property: buaproject:BUAPROJECT_0000036 (project ID)
 
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000036 "project ID"@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000036 "projekt ID"@de)
@@ -352,7 +351,7 @@ SubDataPropertyOf(buaproject:BUAPROJECT_0000036 roh:projectID)
 DataPropertyDomain(buaproject:BUAPROJECT_0000036 buaproject:BUAPROJECT_0000000)
 DataPropertyRange(buaproject:BUAPROJECT_0000036 rdfs:Literal)
 
-# Data Property: buaproject:BUAPROJECT_0000037 (Ziel des Projekts)
+# Data Property: buaproject:BUAPROJECT_0000037 (Project Objective)
 
 AnnotationAssertion(rdfs:comment buaproject:BUAPROJECT_0000037 "A defined objective of the project."@en)
 AnnotationAssertion(rdfs:comment buaproject:BUAPROJECT_0000037 "Eine definierte Ziel des Projekts."@en)
@@ -361,13 +360,13 @@ AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000037 "Ziel des Projekts"
 DataPropertyDomain(buaproject:BUAPROJECT_0000037 vivo:Project)
 DataPropertyRange(buaproject:BUAPROJECT_0000037 xsd:string)
 
-# Data Property: buaproject:BUAPROJECT_0000038 (Projekttitel)
+# Data Property: buaproject:BUAPROJECT_0000038 (Project title)
 
 AnnotationAssertion(rdfs:comment buaproject:BUAPROJECT_0000038 "A data property that associates a title to a bua Projekt instance.")
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000038 "Project title"@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000038 "Projekttitel"@de)
 
-# Data Property: buaproject:BUAPROJECT_0000039 (titel)
+# Data Property: buaproject:BUAPROJECT_0000039 (title)
 
 AnnotationAssertion(rdfs:comment buaproject:BUAPROJECT_0000039 "A data property that associates a title to any ROH entity requiring it."@en)
 AnnotationAssertion(rdfs:comment buaproject:BUAPROJECT_0000039 "Eine Dateneigenschaft, die einen Titel mit jeder ROH-Entität verknüpft, die ihn benötigt."@de)
@@ -381,7 +380,7 @@ SubDataPropertyOf(buaproject:BUAPROJECT_0000039 roh:title)
 #   Classes
 ############################
 
-# Class: buaproject:BUAPROJECT_0000000 (Projekt)
+# Class: buaproject:BUAPROJECT_0000000 (Project)
 
 AnnotationAssertion(obo:IAO_0000112 buaproject:BUAPROJECT_0000000 "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim.")
 AnnotationAssertion(obo:IAO_0000115 buaproject:BUAPROJECT_0000000 "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim.")
@@ -395,10 +394,10 @@ SubClassOf(buaproject:BUAPROJECT_0000000 ObjectSomeValuesFrom(vivo:dateTimeInter
 SubClassOf(buaproject:BUAPROJECT_0000000 ObjectSomeValuesFrom(vivo:relates bfo:BFO_0000023))
 SubClassOf(buaproject:BUAPROJECT_0000000 ObjectAllValuesFrom(obo:ARG_2000028 vcard:Individual))
 SubClassOf(buaproject:BUAPROJECT_0000000 ObjectAllValuesFrom(obo:BFO_0000051 buaproject:BUAPROJECT_0000000))
-SubClassOf(buaproject:BUAPROJECT_0000000 ObjectAllValuesFrom(bua:hasKnowledgeArea ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme bua:KnowledgeArea))))
 SubClassOf(buaproject:BUAPROJECT_0000000 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000018 vivo:DateTimeValue))
 SubClassOf(buaproject:BUAPROJECT_0000000 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000021 ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme buaproject:BUAPROJECT_0000006))))
 SubClassOf(buaproject:BUAPROJECT_0000000 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000028 buaproject:BUAPROJECT_0000011))
+SubClassOf(buaproject:BUAPROJECT_0000000 ObjectAllValuesFrom(buaproject:hasKnowledgeArea ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme buaproject:KnowledgeArea))))
 SubClassOf(buaproject:BUAPROJECT_0000000 ObjectAllValuesFrom(vivo:relates bfo:BFO_0000023))
 SubClassOf(buaproject:BUAPROJECT_0000000 DataSomeValuesFrom(buaproject:BUAPROJECT_0000038 xsd:string))
 SubClassOf(buaproject:BUAPROJECT_0000000 DataAllValuesFrom(buaproject:BUAPROJECT_0000037 rdfs:Literal))
@@ -414,13 +413,13 @@ AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000001 "Experimentelles Pr
 SubClassOf(buaproject:BUAPROJECT_0000001 roh:ExperimentalProtocol)
 SubClassOf(buaproject:BUAPROJECT_0000001 bfo:BFO_0000015)
 SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(<http://purl.org/spar/cito/cites> owl:Thing))
-SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(bua:hasKnowledgeArea ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme bua:KnowledgeArea))))
 SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000014 foaf:Person))
 SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000020 buaproject:BUAPROJECT_0000001))
 SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000026 buaproject:BUAPROJECT_0000012))
 SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000028 buaproject:BUAPROJECT_0000002))
 SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000031 buaproject:BUAPROJECT_0000009))
-SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000035 rdf:Seq))
+SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000035 <http://purl.org/co/List>))
+SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(buaproject:hasKnowledgeArea ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme buaproject:KnowledgeArea))))
 SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(vivo:dateTimeInterval vivo:DateTimeInterval))
 SubClassOf(buaproject:BUAPROJECT_0000001 ObjectAllValuesFrom(foaf:homepage bibo:Webpage))
 SubClassOf(buaproject:BUAPROJECT_0000001 ObjectMaxCardinality(1 buaproject:BUAPROJECT_0000035))
@@ -438,14 +437,14 @@ AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000002 "Experimentelles Pr
 SubClassOf(buaproject:BUAPROJECT_0000002 roh:ExperimentalProtocolResult)
 SubClassOf(buaproject:BUAPROJECT_0000002 bibo:Document)
 
-# Class: buaproject:BUAPROJECT_0000003 (External Member Role)
+# Class: buaproject:BUAPROJECT_0000003 (Rolle des externen Mitglieds)
 
 AnnotationAssertion(rdfs:comment buaproject:BUAPROJECT_0000003 "A member who works in a Project or participates in an Activity but do not belong to the main Organization."@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000003 "External Member Role"@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000003 "Rolle des externen Mitglieds"@de)
 SubClassOf(buaproject:BUAPROJECT_0000003 bfo:BFO_0000023)
 
-# Class: buaproject:BUAPROJECT_0000004 (Ausstehend)
+# Class: buaproject:BUAPROJECT_0000004 (Open)
 
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000004 "Ausstehend"@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000004 "Open"@en)
@@ -457,38 +456,38 @@ AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000005 "Abgeschlossen"@de)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000005 "Closed"@en)
 SubClassOf(buaproject:BUAPROJECT_0000005 buaproject:BUAPROJECT_0000013)
 
-# Class: buaproject:BUAPROJECT_0000006 (Projektklassifikation)
+# Class: buaproject:BUAPROJECT_0000006 (Project Classification)
 
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000006 "Project Classification"@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000006 "Projektklassifikation"@de)
 
-# Class: buaproject:BUAPROJECT_0000007 (Proposal Submitted)
+# Class: buaproject:BUAPROJECT_0000007 (Antrag eingereicht)
 
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000007 "Antrag eingereicht"@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000007 "Proposal Submitted"@en)
 SubClassOf(buaproject:BUAPROJECT_0000007 buaproject:BUAPROJECT_0000013)
 
-# Class: buaproject:BUAPROJECT_0000008 (Abgelehnt)
+# Class: buaproject:BUAPROJECT_0000008 (Rejected)
 
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000008 "Abgelehnt"@en)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000008 "Rejected"@en)
 SubClassOf(buaproject:BUAPROJECT_0000008 buaproject:BUAPROJECT_0000013)
 
-# Class: buaproject:BUAPROJECT_0000009 (Repository)
+# Class: buaproject:BUAPROJECT_0000009 (Repositorie)
 
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000009 "Repositorie"@de)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000009 "Repository"@en)
 SubClassOf(buaproject:BUAPROJECT_0000009 iao:IAO_0000030)
 SubClassOf(buaproject:BUAPROJECT_0000009 roh:Repository)
 SubClassOf(buaproject:BUAPROJECT_0000009 ObjectSomeValuesFrom(buaproject:BUAPROJECT_0000032 ObjectUnionOf(buaproject:BUAPROJECT_0000004 buaproject:BUAPROJECT_0000005)))
-SubClassOf(buaproject:BUAPROJECT_0000009 ObjectSomeValuesFrom(buaproject:BUAPROJECT_0000035 rdf:Seq))
-SubClassOf(buaproject:BUAPROJECT_0000009 ObjectAllValuesFrom(bua:hasKnowledgeArea ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme bua:KnowledgeArea))))
+SubClassOf(buaproject:BUAPROJECT_0000009 ObjectSomeValuesFrom(buaproject:BUAPROJECT_0000035 <http://purl.org/co/List>))
 SubClassOf(buaproject:BUAPROJECT_0000009 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000014 foaf:Person))
 SubClassOf(buaproject:BUAPROJECT_0000009 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000019 vivo:License))
 SubClassOf(buaproject:BUAPROJECT_0000009 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000020 buaproject:BUAPROJECT_0000009))
 SubClassOf(buaproject:BUAPROJECT_0000009 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000026 buaproject:BUAPROJECT_0000012))
 SubClassOf(buaproject:BUAPROJECT_0000009 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000032 ObjectUnionOf(buaproject:BUAPROJECT_0000004 buaproject:BUAPROJECT_0000005)))
-SubClassOf(buaproject:BUAPROJECT_0000009 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000035 rdf:Seq))
+SubClassOf(buaproject:BUAPROJECT_0000009 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000035 <http://purl.org/co/List>))
+SubClassOf(buaproject:BUAPROJECT_0000009 ObjectAllValuesFrom(buaproject:hasKnowledgeArea ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme buaproject:KnowledgeArea))))
 SubClassOf(buaproject:BUAPROJECT_0000009 ObjectAllValuesFrom(vivo:dateTimeValue vivo:DateTimeValue))
 SubClassOf(buaproject:BUAPROJECT_0000009 ObjectAllValuesFrom(foaf:homepage bibo:Webpage))
 SubClassOf(buaproject:BUAPROJECT_0000009 ObjectMaxCardinality(1 buaproject:BUAPROJECT_0000035))
@@ -514,25 +513,25 @@ AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000011 "Research Object"@e
 EquivalentClasses(buaproject:BUAPROJECT_0000011 ObjectUnionOf(ObjectSomeValuesFrom(buaproject:BUAPROJECT_0000026 buaproject:BUAPROJECT_0000012) ObjectAllValuesFrom(buaproject:BUAPROJECT_0000027 buaproject:BUAPROJECT_0000000)))
 SubClassOf(buaproject:BUAPROJECT_0000011 buaproject:BUAPROJECT_0000012)
 
-# Class: buaproject:BUAPROJECT_0000012 (Forschungsergebnis)
+# Class: buaproject:BUAPROJECT_0000012 (Research Result)
 
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000012 "Forschungsergebnis"@de)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000012 "Research Result"@en)
 SubClassOf(buaproject:BUAPROJECT_0000012 ObjectSomeValuesFrom(buaproject:BUAPROJECT_0000014 foaf:Person))
-SubClassOf(buaproject:BUAPROJECT_0000012 ObjectSomeValuesFrom(buaproject:BUAPROJECT_0000035 rdf:Seq))
+SubClassOf(buaproject:BUAPROJECT_0000012 ObjectSomeValuesFrom(buaproject:BUAPROJECT_0000035 <http://purl.org/co/List>))
 SubClassOf(buaproject:BUAPROJECT_0000012 ObjectAllValuesFrom(<http://purl.org/spar/cito/cites> owl:Thing))
-SubClassOf(buaproject:BUAPROJECT_0000012 ObjectAllValuesFrom(bua:hasKnowledgeArea ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme bua:KnowledgeArea))))
 SubClassOf(buaproject:BUAPROJECT_0000012 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000019 vivo:License))
 SubClassOf(buaproject:BUAPROJECT_0000012 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000020 buaproject:BUAPROJECT_0000012))
 SubClassOf(buaproject:BUAPROJECT_0000012 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000023 buaproject:BUAPROJECT_0000012))
 SubClassOf(buaproject:BUAPROJECT_0000012 ObjectAllValuesFrom(buaproject:BUAPROJECT_0000033 buaproject:BUAPROJECT_0000012))
-SubClassOf(buaproject:BUAPROJECT_0000012 ObjectAllValuesFrom(bibo:AuthorList rdf:Seq))
+SubClassOf(buaproject:BUAPROJECT_0000012 ObjectAllValuesFrom(buaproject:hasKnowledgeArea ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme buaproject:KnowledgeArea))))
+SubClassOf(buaproject:BUAPROJECT_0000012 ObjectAllValuesFrom(bibo:AuthorList <http://purl.org/co/List>))
 SubClassOf(buaproject:BUAPROJECT_0000012 ObjectAllValuesFrom(foaf:homepage bibo:Webpage))
 SubClassOf(buaproject:BUAPROJECT_0000012 DataAllValuesFrom(buaproject:BUAPROJECT_0000039 xsd:string))
 SubClassOf(buaproject:BUAPROJECT_0000012 DataAllValuesFrom(vivo:freetextKeyword xsd:string))
 SubClassOf(buaproject:BUAPROJECT_0000012 DataAllValuesFrom(bibo:abstract xsd:string))
 
-# Class: buaproject:BUAPROJECT_0000013 (Stand)
+# Class: buaproject:BUAPROJECT_0000013 (Status)
 
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000013 "Stand"@de)
 AnnotationAssertion(rdfs:label buaproject:BUAPROJECT_0000013 "Status"@en)
