@@ -6,6 +6,12 @@ docs_dir: docs/
 repo_name: 'BUA-VIVO/bua-upper-ontology'
 repo_url: 'https://github.com/BUA-VIVO/bua-upper-ontology'
 nav:
-    - Home: index.md
+    - BUA UPPER ONTOLOGY: index.md
+    - SUBCLASSED ONTOLOGIES: subclassed.md
+      - VIVO ONTOLOGY: vivo.md
+      - ROH ONTOLOGY: roh.md
+    - IMPORTED ONTOLOGIES : imported.md
+      - THE PROJECT ONTOLOGY : project.md
+      - THE COLLECTION ONTOLOGY: collection.md
 theme:
   name: 'material'
