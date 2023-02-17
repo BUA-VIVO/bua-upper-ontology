@@ -1,17 +1,16 @@
-
 site_name: BUA Uppper Ontology
-site_description: 'A docs test'
-site_author: 'Rolf Guescini'
+site_description: A docs test
+site_author: Rolf Guescini
 docs_dir: docs/
-repo_name: 'BUA-VIVO/bua-upper-ontology'
-repo_url: 'https://github.com/BUA-VIVO/bua-upper-ontology'
+repo_name: BUA-VIVO/bua-upper-ontology
+repo_url: https://github.com/BUA-VIVO/bua-upper-ontology
 nav:
-    - BUA UPPER ONTOLOGY: index.md
-    - SUBCLASSED ONTOLOGIES: subclassed.md
+  - BUA UPPER ONTOLOGY: index.md
+  - SUBCLASSED ONTOLOGIES:
       - VIVO ONTOLOGY: vivo.md
       - ROH ONTOLOGY: roh.md
-    - IMPORTED ONTOLOGIES : imported.md
-      - THE PROJECT ONTOLOGY : project.md
+  - IMPORTED ONTOLOGIES:
+      - THE PROJECT ONTOLOGY: project.md
       - THE COLLECTION ONTOLOGY: collection.md
 theme:
-  name: 'material'
+  name: material
