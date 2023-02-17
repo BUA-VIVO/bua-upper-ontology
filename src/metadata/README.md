@@ -1,4 +1,4 @@
-Metadata files for the OBO Library
+Metadata files for the BUA ONTOLOGY
 
  * [bua.yml](bua.yml)
      * Determines how your purl.obolibrary.org/obo/bua/ redirects will be handled
