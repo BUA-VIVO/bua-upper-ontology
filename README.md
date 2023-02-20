@@ -1,8 +1,14 @@
 ![Build Status](https://github.com/BUA-VIVO/bua-upper-ontology/workflows/CI/badge.svg)
 # VIVO BUA Upper ontology
 
-Description: None
+Description:
+The BUA Upper Ontology is an upper ontology expressing topics in the German Academic and Academic Administrative domain, intended intitially for the Berliner University Aliance to ensure a consequent common model for the alliance as well as to give each member the freedom to express local idiosynchrasies
 
+The Ontology suclasses and extends mainly the main ontology underlying VIVO, an open source semantic web tool for research discovery [vivo-project / VIVO] (https://github.com/vivo-project/VIVO), as well as the [HerculesCRUE / ROH Academic Domain Ontology] (https://github.com/HerculesCRUE/ROH), to harmonize them for use in VIVO
+
+
+## Documentation:
+[https://bua-vivo.github.io/bua-upper-ontology/](https://bua-vivo.github.io/bua-upper-ontology)
 
 ## Versions
 
