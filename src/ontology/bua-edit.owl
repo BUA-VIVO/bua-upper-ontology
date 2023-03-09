@@ -509,13 +509,13 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot bua:BUA_000002
 AnnotationAssertion(rdfs:label bua:BUA_0000028 "Interdisciplinary institution"@en)
 AnnotationAssertion(rdfs:label bua:BUA_0000028 "Interdisziplinäre Einrichtung"@de)
 
-# Class: bua:BUA_0000029 (Interdisciplinary Center)
+# Class: bua:BUA_0000029 (Interdisziplinäres Zentrum)
 
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot bua:BUA_0000029 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot bua:BUA_0000029 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:inClassGroup bua:BUA_0000029 <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot bua:BUA_0000029 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label bua:BUA_0000029 "Interdisciplinary Center"@de)
+AnnotationAssertion(rdfs:label bua:BUA_0000029 "Interdisciplinary Center"@en)
 AnnotationAssertion(rdfs:label bua:BUA_0000029 "Interdisziplinäres Zentrum"@de)
 
 # Class: bua:BUA_0000030 (Clinic)

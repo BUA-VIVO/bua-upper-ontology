@@ -1613,7 +1613,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> <http://vivoweb.org/ontology#vitroClassGrouporganizations> ;
              <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-             rdfs:label "Interdisciplinary Center"@de ,
+             rdfs:label "Interdisciplinary Center"@en ,
                         "Interdisziplinäres Zentrum"@de .
 
 

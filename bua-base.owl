@@ -643,7 +643,7 @@
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-        <rdfs:label xml:lang="de">Interdisciplinary Center</rdfs:label>
+        <rdfs:label xml:lang="en">Interdisciplinary Center</rdfs:label>
         <rdfs:label xml:lang="de">Interdisziplinäres Zentrum</rdfs:label>
     </owl:Class>
     
