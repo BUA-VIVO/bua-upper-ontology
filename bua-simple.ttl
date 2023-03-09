@@ -7,13 +7,13 @@
 @base <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-simple.ttl> .
 
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-simple.ttl> rdf:type owl:Ontology ;
-                                                                                     owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-02-16/bua-simple.ttl> ;
+                                                                                     owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-03-09/bua-simple.ttl> ;
                                                                                      <http://purl.org/dc/terms/description> "This is the upper ontology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape"@en ;
                                                                                      <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
                                                                                      <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> "bua"^^xsd:string ;
                                                                                      rdfs:label "Berlin University Alliance Obere Ontologie"@de ,
                                                                                                 "Berlin University Alliance Upper Ontology"@en ;
-                                                                                     owl:versionInfo "2023-02-16"^^xsd:string .
+                                                                                     owl:versionInfo "2023-03-09"^^xsd:string .
 
 #################################################################
 #    Annotation properties

@@ -92,12 +92,14 @@ Declaration(Class(bua:BUA_0000055))
 Declaration(Class(bua:BUA_0000056))
 Declaration(Class(bua:BUA_0000057))
 Declaration(Class(bua:BUA_0000058))
+Declaration(Class(bua:BUA_0000059))
 Declaration(Class(bua:KnowledgeArea))
 Declaration(Class(vivobua:Fachbereich))
 Declaration(Class(vivobua:Gremium))
 Declaration(Class(vivobua:Klinik))
 Declaration(Class(vivobua:SonstigeForschungseinrichtung))
 Declaration(Class(vivobua:ZentraleForschungseinrichtung))
+Declaration(Class(vivobua:forschungsallianz))
 Declaration(Class(vivo-bua-char:Forschungsbereich))
 Declaration(Class(vivo-bua-char:Forschungsschwerpunkt))
 Declaration(Class(vivo-bua-char:Projektbereich))
@@ -671,7 +673,7 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot bua:BUA_000004
 AnnotationAssertion(rdfs:label bua:BUA_0000045 "Other facility"@en)
 AnnotationAssertion(rdfs:label bua:BUA_0000045 "Sonstige Einrichtung"@de)
 
-# Class: bua:BUA_0000046 (Other research facility)
+# Class: bua:BUA_0000046 (Sonstige Forschungseinrichtung)
 
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot bua:BUA_0000046 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot bua:BUA_0000046 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -739,7 +741,7 @@ AnnotationAssertion(rdfs:label bua:BUA_0000053 "Central facility"@en)
 AnnotationAssertion(rdfs:label bua:BUA_0000053 "Zentraleintrichtung"@de)
 SubClassOf(bua:BUA_0000053 vivode:ZentraleEinrichtung)
 
-# Class: bua:BUA_0000054 (Zentrale Forschungseinrichtung)
+# Class: bua:BUA_0000054 (Central research facility)
 
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot bua:BUA_0000054 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot bua:BUA_0000054 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -787,6 +789,16 @@ AnnotationAssertion(vitro:inClassGroup bua:BUA_0000058 <http://vivoweb.org/ontol
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot bua:BUA_0000058 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label bua:BUA_0000058 "Central service provider"@en)
 AnnotationAssertion(rdfs:label bua:BUA_0000058 "Zentrale Dienstleister"@de)
+
+# Class: bua:BUA_0000059 (Allianz für innovative Forschung und Lehre)
+
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot bua:BUA_0000059 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot bua:BUA_0000059 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:inClassGroup bua:BUA_0000059 <http://vivoweb.org/ontology#vitroClassGrouporganizations>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot bua:BUA_0000059 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:comment bua:BUA_0000059 "Alliance for innovative Research and Education"@en-us)
+AnnotationAssertion(rdfs:label bua:BUA_0000059 "Allianz für innovative Forschung und Lehre"@de-de)
+SubClassOf(bua:BUA_0000059 vivobua:forschungsallianz)
 
 
 )

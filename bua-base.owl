@@ -11,14 +11,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-base.owl">
-        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-02-16/bua-base.owl"/>
+        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-03-09/bua-base.owl"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:description xml:lang="en">This is the upper ontology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape</terms:description>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <vitro:ontologyPrefixAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bua</vitro:ontologyPrefixAnnot>
         <rdfs:label xml:lang="de">Berlin University Alliance Obere Ontologie</rdfs:label>
         <rdfs:label xml:lang="en">Berlin University Alliance Upper Ontology</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-16</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-09</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1037,6 +1037,20 @@
     
 
 
+    <!-- http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000059 -->
+
+    <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000059">
+        <rdfs:subClassOf rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#forschungsallianz"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:comment xml:lang="en-us">Alliance for innovative Research and Education</rdfs:comment>
+        <rdfs:label xml:lang="de-de">Allianz für innovative Forschung und Lehre</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KnowledgeArea -->
 
     <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/KnowledgeArea"/>
@@ -1070,6 +1084,12 @@
     <!-- http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#ZentraleForschungseinrichtung -->
 
     <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#ZentraleForschungseinrichtung"/>
+    
+
+
+    <!-- http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#forschungsallianz -->
+
+    <owl:Class rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#forschungsallianz"/>
     
 
 
