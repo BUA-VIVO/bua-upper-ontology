@@ -11,14 +11,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-base.owl">
-        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-03-09/bua-base.owl"/>
+        <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-03-14/bua-base.owl"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:description xml:lang="en">This is the upper ontology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape</terms:description>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <vitro:ontologyPrefixAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bua</vitro:ontologyPrefixAnnot>
         <rdfs:label xml:lang="de">Berlin University Alliance Obere Ontologie</rdfs:label>
         <rdfs:label xml:lang="en">Berlin University Alliance Upper Ontology</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-09</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -209,6 +209,95 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000061 -->
+
+    <owl:DatatypeProperty rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000061">
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000002"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000013"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000014"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000022"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000027"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000028"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000029"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000042"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000043"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000045"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000058"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#Fachbereich"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#Gremium"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#Klinik"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#SonstigeForschungseinrichtung"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#ZentraleForschungseinrichtung"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#forschungsallianz"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#Universitaetsklinik"/>
+        <rdfs:domain rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#Zentralregister"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#AcademicUnit"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Center"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Consortium"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Facility"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Hospital"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Institute"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Laboratory"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Library"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Museum"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#ResearchOrganization"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#University"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core/deGraduiertenkolleg"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core/deGraduiertenschule"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core/deLehrstuhl"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core/deSonderforschungsbereichDFG"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core/deZentraleEinrichtung"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Facility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Member list</rdfs:label>
+        <rdfs:label xml:lang="de-de">Mitgliederliste</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000062 -->
+
+    <owl:DatatypeProperty rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000062">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Author list (Cited Authors)</rdfs:label>
+        <rdfs:label xml:lang="de-de">Autorenliste (Zitierte Autoren)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000063 -->
+
+    <owl:DatatypeProperty rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000063">
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Speaker list</rdfs:label>
+        <rdfs:label xml:lang="de-de">Sprecherliste</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -234,6 +323,12 @@
     <!-- http://purl.org/NET/c4dm/event.owl#Event -->
 
     <owl:Class rdf:about="http://purl.org/NET/c4dm/event.owl#Event"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/Document -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/bibo/Document"/>
     
 
 

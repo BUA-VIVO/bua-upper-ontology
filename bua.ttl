@@ -7,13 +7,13 @@
 @base <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/> .
 
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/> rdf:type owl:Ontology ;
-                                                                   owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-03-09/bua.ttl> ;
+                                                                   owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-03-14/bua.ttl> ;
                                                                    <http://purl.org/dc/terms/description> "This is the upper ontology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape"@en ;
                                                                    <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
                                                                    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> "bua"^^xsd:string ;
                                                                    rdfs:label "Berlin University Alliance Obere Ontologie"@de ,
                                                                               "Berlin University Alliance Upper Ontology"@en ;
-                                                                   owl:versionInfo "2023-03-09"^^xsd:string .
+                                                                   owl:versionInfo "2023-03-14"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -735,6 +735,75 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                                "title"@en .
 
 
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000061
+:BUA_0000061 rdf:type owl:DatatypeProperty ;
+             rdfs:domain :BUA_0000002 ,
+                         :BUA_0000013 ,
+                         :BUA_0000014 ,
+                         :BUA_0000022 ,
+                         :BUA_0000027 ,
+                         :BUA_0000028 ,
+                         :BUA_0000029 ,
+                         :BUA_0000042 ,
+                         :BUA_0000043 ,
+                         :BUA_0000045 ,
+                         :BUA_0000058 ,
+                         <http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#Fachbereich> ,
+                         <http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#Gremium> ,
+                         <http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#Klinik> ,
+                         <http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#SonstigeForschungseinrichtung> ,
+                         <http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#ZentraleForschungseinrichtung> ,
+                         <http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#forschungsallianz> ,
+                         <http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#Universitaetsklinik> ,
+                         <http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#Zentralregister> ,
+                         <http://vivoweb.org/ontology/core#AcademicUnit> ,
+                         <http://vivoweb.org/ontology/core#Center> ,
+                         <http://vivoweb.org/ontology/core#Consortium> ,
+                         <http://vivoweb.org/ontology/core#Department> ,
+                         <http://vivoweb.org/ontology/core#Facility> ,
+                         <http://vivoweb.org/ontology/core#Hospital> ,
+                         <http://vivoweb.org/ontology/core#Institute> ,
+                         <http://vivoweb.org/ontology/core#Laboratory> ,
+                         <http://vivoweb.org/ontology/core#Library> ,
+                         <http://vivoweb.org/ontology/core#Museum> ,
+                         <http://vivoweb.org/ontology/core#ResearchOrganization> ,
+                         <http://vivoweb.org/ontology/core#University> ,
+                         <http://vivoweb.org/ontology/core/deGraduiertenkolleg> ,
+                         <http://vivoweb.org/ontology/core/deGraduiertenschule> ,
+                         <http://vivoweb.org/ontology/core/deLehrstuhl> ,
+                         <http://vivoweb.org/ontology/core/deSonderforschungsbereichDFG> ,
+                         <http://vivoweb.org/ontology/core/deZentraleEinrichtung> ,
+                         <http://xmlns.com/foaf/0.1/Facility> ;
+             rdfs:range xsd:string ;
+             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+             rdfs:label "Member list"@en-us ,
+                        "Mitgliederliste"@de-de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000062
+:BUA_0000062 rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://purl.org/ontology/bibo/Document> ;
+             rdfs:range xsd:string ;
+             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+             rdfs:label "Author list (Cited Authors)"@en-us ,
+                        "Autorenliste (Zitierte Autoren)"@de-de .
+
+
+###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUA_0000063
+:BUA_0000063 rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
+             rdfs:range xsd:string ;
+             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+             <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+             rdfs:label "Speaker list"@en-us ,
+                        "Sprecherliste"@de-de .
+
+
 ###  http://vivoweb.org/ontology/core#abbreviation
 <http://vivoweb.org/ontology/core#abbreviation> rdf:type owl:DatatypeProperty .
 
@@ -880,6 +949,10 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                          rdfs:subClassOf <http://purl.org/co/Collection> ;
                          rdfs:comment "A collection that cannot contain duplicate elements."@en ;
                          rdfs:label "set"@en .
+
+
+###  http://purl.org/ontology/bibo/Document
+<http://purl.org/ontology/bibo/Document> rdf:type owl:Class .
 
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/BUAPROJECT_0000000
