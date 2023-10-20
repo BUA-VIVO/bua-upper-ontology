@@ -1,4 +1,5 @@
-![Build Status](https://github.com/BUA-VIVO/bua-upper-ontology/workflows/CI/badge.svg)[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+![Build Status](https://github.com/BUA-VIVO/bua-upper-ontology/workflows/CI/badge.svg)
+
 # VIVO BUA Upper ontology
 
 Description:
@@ -29,3 +30,6 @@ Please use this GitHub repository's [Issue tracker](https://github.com/BUA-VIVO/
 ## Acknowledgements
 
 This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
+
+
+[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
