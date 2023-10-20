@@ -17,6 +17,7 @@ Prefix(vivo:=<http://vivoweb.org/ontology/core#>)
 Prefix(event:=<http://purl.org/NET/c4dm/event.owl#>)
 Prefix(vitro:=<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>)
 Prefix(vivode:=<http://vivoweb.org/ontology/core/de>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
 Prefix(vivobua:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#>)
 Prefix(vivo-bua-fub:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#>)
 Prefix(vivo-bua-char:=<http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#>)
@@ -24,8 +25,9 @@ Prefix(vivo-bua-char:=<http://vivo.berlin-university-alliance.de/ontology/core/v
 
 Ontology(<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/>
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/1.0>
-Annotation(<http://purl.org/dc/terms/description> "This is the upper ontology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape"@en)
-Annotation(<http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/>)
+Annotation(dcterms:creator <https://orcid.org/0000-0003-4325-5751>)
+Annotation(dcterms:description "This is the upper ontology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape"@en)
+Annotation(dcterms:license <http://creativecommons.org/licenses/by/4.0/>)
 Annotation(vitro:ontologyPrefixAnnot "bua"^^xsd:string)
 Annotation(rdfs:label "Berlin University Alliance Obere Ontologie"@de)
 Annotation(rdfs:label "Berlin University Alliance Upper Ontology"@en)
@@ -140,8 +142,11 @@ Declaration(ObjectProperty(skos:inScheme))
 Declaration(DataProperty(bua:BUA_0000061))
 Declaration(DataProperty(bua:BUA_0000062))
 Declaration(DataProperty(bua:BUA_0000063))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+Declaration(AnnotationProperty(<http://purl.org/dc/termscreator>))
+Declaration(AnnotationProperty(<http://purl.org/dc/termsdescription>))
+Declaration(AnnotationProperty(<http://purl.org/dc/termslicense>))
+Declaration(AnnotationProperty(dcterms:description))
+Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(vitro:hiddenFromDisplayBelowRoleLevelAnnot))
 Declaration(AnnotationProperty(vitro:hiddenFromPublishBelowRoleLevelAnnot))
 Declaration(AnnotationProperty(vitro:inClassGroup))
@@ -154,13 +159,13 @@ Declaration(AnnotationProperty(bua:geritId))
 #   Annotation Properties
 ############################
 
-# Annotation Property: <http://purl.org/dc/terms/description> (description)
+# Annotation Property: dcterms:description (description)
 
-AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/description> "description")
+AnnotationAssertion(rdfs:label dcterms:description "description")
 
-# Annotation Property: <http://purl.org/dc/terms/license> (license)
+# Annotation Property: dcterms:license (license)
 
-AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/license> "license")
+AnnotationAssertion(rdfs:label dcterms:license "license")
 
 # Annotation Property: bua:geritId (GERIT ID)
 
