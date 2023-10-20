@@ -24,7 +24,6 @@ Prefix(vivo-bua-char:=<http://vivo.berlin-university-alliance.de/ontology/core/v
 
 Ontology(<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/>
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/1.0>
-Import(<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/project/buaproject.owl>)
 Annotation(<http://purl.org/dc/terms/description> "This is the upper ontology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape"@en)
 Annotation(<http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/>)
 Annotation(vitro:ontologyPrefixAnnot "bua"^^xsd:string)
@@ -520,7 +519,7 @@ AnnotationAssertion(rdfs:label bua:BUA_0000021 "Graduiertenkolleg"@de)
 AnnotationAssertion(rdfs:label bua:BUA_0000021 "Research Training Group"@en)
 SubClassOf(bua:BUA_0000021 vivode:Graduiertenkolleg)
 
-# Class: bua:BUA_0000022 (Doctoral program)
+# Class: bua:BUA_0000022 (Graduiertenprogram)
 
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot bua:BUA_0000022 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot bua:BUA_0000022 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
@@ -817,7 +816,7 @@ AnnotationAssertion(rdfs:label bua:BUA_0000053 "Central facility"@en)
 AnnotationAssertion(rdfs:label bua:BUA_0000053 "Zentraleintrichtung"@de)
 SubClassOf(bua:BUA_0000053 vivode:ZentraleEinrichtung)
 
-# Class: bua:BUA_0000054 (Zentrale Forschungseinrichtung)
+# Class: bua:BUA_0000054 (Central research facility)
 
 AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot bua:BUA_0000054 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot bua:BUA_0000054 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
