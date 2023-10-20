@@ -1,7 +1,5 @@
-![Build Status](https://github.com/BUA-VIVO/bua-upper-ontology/workflows/CI/badge.svg)
+![Build Status](https://github.com/BUA-VIVO/bua-upper-ontology/workflows/CI/badge.svg)[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
 # VIVO BUA Upper ontology
-
-[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
 
 Description:
 The BUA Upper Ontology is an upper ontology expressing topics in the German Academic and Academic Administrative domain, intended intitially for the Berliner University Aliance to ensure a consequent common model for the alliance as well as to give each member the freedom to express local idiosynchrasies
