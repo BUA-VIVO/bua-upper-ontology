@@ -1,65 +1,68 @@
 @prefix : <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-simple.ttl#> .
+@prefix bua: <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @base <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-simple.ttl> .
 
 <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-simple.ttl> rdf:type owl:Ontology ;
-                                                                                     owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-03-14/bua-simple.ttl> ;
-                                                                                     <http://purl.org/dc/terms/description> "This is the upper ontology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape"@en ;
-                                                                                     <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
-                                                                                     <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> "bua"^^xsd:string ;
+                                                                                     owl:versionIRI <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-10-20/bua-simple.ttl> ;
+                                                                                     terms:description "This is the upper ontology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape"@en ;
+                                                                                     terms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                                                                     vitro:ontologyPrefixAnnot "bua" ;
                                                                                      rdfs:label "Berlin University Alliance Obere Ontologie"@de ,
                                                                                                 "Berlin University Alliance Upper Ontology"@en ;
-                                                                                     owl:versionInfo "2023-03-14"^^xsd:string .
+                                                                                     owl:versionInfo "2023-10-20" .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
 ###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty ;
-                                       rdfs:label "description" .
+terms:description rdf:type owl:AnnotationProperty ;
+                  rdfs:label "description" .
 
 
 ###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
-                                   rdfs:label "license" .
+terms:license rdf:type owl:AnnotationProperty ;
+              rdfs:label "license" .
 
 
 ###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot
-<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> rdf:type owl:AnnotationProperty .
+vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:type owl:AnnotationProperty .
 
 
 ###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot
-<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> rdf:type owl:AnnotationProperty .
+vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:type owl:AnnotationProperty .
 
 
 ###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup
-<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup> rdf:type owl:AnnotationProperty .
+vitro:inClassGroup rdf:type owl:AnnotationProperty .
 
 
 ###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot
-<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot> rdf:type owl:AnnotationProperty .
+vitro:inPropertyGroupAnnot rdf:type owl:AnnotationProperty .
 
 
 ###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot
-<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> rdf:type owl:AnnotationProperty .
+vitro:ontologyPrefixAnnot rdf:type owl:AnnotationProperty .
 
 
 ###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot
-<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> rdf:type owl:AnnotationProperty .
+vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:type owl:AnnotationProperty .
 
 
 ###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot
-<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> rdf:type owl:AnnotationProperty .
+vitro:selectFromExistingAnnot rdf:type owl:AnnotationProperty .
 
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/geritId
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/geritId> rdf:type owl:AnnotationProperty ;
-                                                                         rdfs:label "GERIT ID" .
+bua:geritId rdf:type owl:AnnotationProperty ;
+            rdfs:label "GERIT ID" .
 
 
 #################################################################
@@ -79,48 +82,48 @@
 
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/hasKnowledgeArea
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/hasKnowledgeArea> rdf:type owl:ObjectProperty ;
-                                                                                  owl:inverseOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/knowledgeAreaFor> ,
-                                                                                                <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/knowledgeAreaOf> ;
-                                                                                  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot> <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
-                                                                                  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
-                                                                                  rdfs:comment "Eine Entität, die sich auf ein beliebiges Konzept bezieht"@de ,
-                                                                                               "Some entity related to any Concept."@en ;
-                                                                                  rdfs:label "has knowledge area"@en ,
-                                                                                             "hat wissensbereich"@de .
+bua:hasKnowledgeArea rdf:type owl:ObjectProperty ;
+                     owl:inverseOf bua:knowledgeAreaFor ,
+                                   bua:knowledgeAreaOf ;
+                     vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+                     vitro:selectFromExistingAnnot "true"^^xsd:boolean ;
+                     rdfs:comment "Eine Entität, die sich auf ein beliebiges Konzept bezieht"@de ,
+                                  "Some entity related to any Concept."@en ;
+                     rdfs:label "has knowledge area"@en ,
+                                "hat wissensbereich"@de .
 
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/hasTopic
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/hasTopic> rdf:type owl:ObjectProperty ;
-                                                                          owl:inverseOf <http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/topicIn> ;
-                                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot> <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
-                                                                          <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
-                                                                          rdfs:label "has concept"@en ,
-                                                                                     "hat zum gegenstand"@de .
+bua:hasTopic rdf:type owl:ObjectProperty ;
+             owl:inverseOf bua:topicIn ;
+             vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+             vitro:selectFromExistingAnnot "true"^^xsd:boolean ;
+             rdfs:label "has concept"@en ,
+                        "hat zum gegenstand"@de .
 
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/knowledgeAreaFor
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/knowledgeAreaFor> rdf:type owl:ObjectProperty ;
-                                                                                  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot> <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
-                                                                                  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
-                                                                                  rdfs:label "knowledge area for"@en ,
-                                                                                             "wissensbereich für"@de .
+bua:knowledgeAreaFor rdf:type owl:ObjectProperty ;
+                     vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+                     vitro:selectFromExistingAnnot "true"^^xsd:boolean ;
+                     rdfs:label "knowledge area for"@en ,
+                                "wissensbereich für"@de .
 
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/knowledgeAreaOf
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/knowledgeAreaOf> rdf:type owl:ObjectProperty .
+bua:knowledgeAreaOf rdf:type owl:ObjectProperty .
 
 
 ###  http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/topicIn
-<http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/topicIn> rdf:type owl:ObjectProperty ;
-                                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot> <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
-                                                                         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
-                                                                         rdfs:label "concept in"@en ,
-                                                                                    "gegenstand von"@de .
+bua:topicIn rdf:type owl:ObjectProperty ;
+            vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+            vitro:selectFromExistingAnnot "true"^^xsd:boolean ;
+            rdfs:label "concept in"@en ,
+                       "gegenstand von"@de .
 
 
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 <http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
 
 
-###  Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi
