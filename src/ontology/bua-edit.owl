@@ -142,11 +142,9 @@ Declaration(ObjectProperty(skos:inScheme))
 Declaration(DataProperty(bua:BUA_0000061))
 Declaration(DataProperty(bua:BUA_0000062))
 Declaration(DataProperty(bua:BUA_0000063))
-Declaration(AnnotationProperty(<http://purl.org/dc/termscreator>))
-Declaration(AnnotationProperty(<http://purl.org/dc/termsdescription>))
-Declaration(AnnotationProperty(<http://purl.org/dc/termslicense>))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:creator))
 Declaration(AnnotationProperty(vitro:hiddenFromDisplayBelowRoleLevelAnnot))
 Declaration(AnnotationProperty(vitro:hiddenFromPublishBelowRoleLevelAnnot))
 Declaration(AnnotationProperty(vitro:inClassGroup))
@@ -166,6 +164,11 @@ AnnotationAssertion(rdfs:label dcterms:description "description")
 # Annotation Property: dcterms:license (license)
 
 AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:license (license)
+
+AnnotationAssertion(rdfs:label dcterms:creator "creator")
+
 
 # Annotation Property: bua:geritId (GERIT ID)
 
