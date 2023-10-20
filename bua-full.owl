@@ -17,16 +17,17 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vivo="http://vivoweb.org/ontology/core#"
      xmlns:event="http://purl.org/NET/c4dm/event.owl#"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
      xmlns:vivode="http://vivoweb.org/ontology/core/de"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:vivobua="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua#"
      xmlns:vivo-bua-fub="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/fub#"
      xmlns:vivo-bua-char="http://vivo.berlin-university-alliance.de/ontology/core/v1/vivo/bua/char#">
     <owl:Ontology rdf:about="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/bua-full.owl">
         <owl:versionIRI rdf:resource="http://vivo.berlin-university-alliance.de/ontology/core/v1/bua/bua/releases/2023-10-20/bua-full.owl"/>
-        <terms:description xml:lang="en">This is the upper ontology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape</terms:description>
-        <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0003-4325-5751"/>
+        <dcterms:description xml:lang="en">This is the upper ontology for the Berlin University Alliance. It describes the entities in the Berliner University Organization and Research landscape</dcterms:description>
+        <dcterms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/deed.en"/>
         <vitro:ontologyPrefixAnnot>bua</vitro:ontologyPrefixAnnot>
         <rdfs:label xml:lang="de">Berlin University Alliance Obere Ontologie</rdfs:label>
         <rdfs:label xml:lang="en">Berlin University Alliance Upper Ontology</rdfs:label>
@@ -43,6 +44,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:label>creator</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
