@@ -15,4 +15,4 @@ In addition to to the organisational entities, the BUA upper ontology also defin
 ![Fig2: Details view of upper ontology](images/bua-vowl-details.png)
 *Fig2: Details view of upper ontology*
 
-In addition to the classes, the upper ontology also contains Object [Properties](https://www.w3.org/TR/owl-ref/#Property) which make out the relation types used to relate entities together within a sertain semantic function as well as data properties making up emtadata fileds on the class instances.
+In addition to the classes, the upper ontology also contains Object [Properties](https://www.w3.org/TR/owl-ref/#Property) which make out the relation types used to relate entities together within a sertain semantic function as well as data properties making up metadata fields on the class instances.
