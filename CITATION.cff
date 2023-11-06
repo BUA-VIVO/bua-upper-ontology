@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: Berlin University Alliance Upper Ontology
+message: >-
+  If you use this software, please cite it using these
+  metadata.
+type: dataset
+authors:
+  - given-names: Rolf
+    family-names: Guescini
+    affiliation: Humboldt-Universität zu Berlin
+    orcid: 'https://orcid.org/0000-0003-4325-5751'
+repository-code: >-
+  https://github.com/BUA-VIVO/bua-upper-ontology
+url: >-
+  https://bua-vivo.github.io/bua-upper-ontology/
+abstract: >-
+  The BUA Upper Ontology is an upper ontology expressing topics in the German Academic and Academic Administrative domain, intended for the Berliner University Aliance to ensure a consequent common model for the alliance as well as to give each member the freedom to express local idiosynchrasies
+keywords:
+  - VIVO
+  - Berlin University Alliance
+  - Ontology
+license: CC0-1.0
+version: '1.0.0'
+commit: https://github.com/BUA-VIVO/bua-upper-ontology/releases/tag/v1.0.0
+date-released: '2023-11-06'
