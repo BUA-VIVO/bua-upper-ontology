@@ -33,3 +33,6 @@ This ontology repository was created using the [Ontology Development Kit (ODK)](
 
 
 [![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+
+## Publication
+[![DOI](https://zenodo.org/badge/585951238.svg)](https://zenodo.org/doi/10.5281/zenodo.10401041)
