@@ -22,7 +22,7 @@ keywords:
 license: CC0-1.0
 identifiers:
   - type: DOI
-  - value: 10.5281/zenodo.10401042
+  value: 10.5281/zenodo.10401042
 version: '1.0.0'
 commit: https://github.com/BUA-VIVO/bua-upper-ontology/tree/v1.0.0
 date-released: '2023-11-06'
